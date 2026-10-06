@@ -5,7 +5,7 @@ from django.db import models
 class Currency(models.Model):
     """A currency and its rate against USD, for price normalisation."""
 
-    code = models.CharField(max_length=3, unique=True)  # ISO 4217, e.g. "EUR"
+    code = models.CharField(max_length=3, unique=True)
     value_usd = models.DecimalField(max_digits=20, decimal_places=10)
 
     class Meta:
