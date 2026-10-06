@@ -27,7 +27,7 @@ class CityListView(ListView):
     """
 
     model = City
-    template_name = "listings/clts.html"
+    template_name = "listings/cities.html"
     context_object_name = "cities"
 
     # ---------------------------------------------------------------- helpers

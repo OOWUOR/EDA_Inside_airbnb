@@ -1,0 +1,667 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Inside Airbnb — City Catalogue</title>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/city_list/style.css' %}?v=11">
+    </head>
+    <body>
+
+        <div class="app">
+
+            {# ══════════════════════════════════════════════════════════════════ #}
+            {# TOPBAR                                                            #}
+            {# ══════════════════════════════════════════════════════════════════ #}
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="hamburger" id="sidebar-toggle" type="button"
+                            aria-controls="app-sidebar" aria-expanded="true" aria-label="Toggle sidebar">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <div class="brand">
+                        <span><i class="bx bxl-airbnb" style="color:crimson;"></i></span>
+                        <h1>Inside Airbnb</h1>
+                        <span class="tag">Exploratory listings data analysis</span>
+                    </div>
+                </div>
+
+                <div class="topbar-search">
+                    <form method="get" action="" role="search">
+                        <input type="search" name="q" placeholder="Search cities…"
+                               value="{{ search_query|default:'' }}" autocomplete="off" spellcheck="false">
+                        {% if search_query %}
+                            <a class="clear-search" href="?"><i class="fas fa-times"></i></a>
+                        {% endif %}
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div class="count">
+                    <strong>{{ page_obj.paginator.count|default:cities|length }}</strong>
+                    cit{{ page_obj.paginator.count|default:cities|length|pluralize:"y,ies" }}
+                </div>
+            </header>
+
+            <div class="sidebar-scrim" id="sidebar-scrim"></div>
+
+            {# ══════════════════════════════════════════════════════════════════ #}
+            {# SIDEBAR                                                           #}
+            {# ══════════════════════════════════════════════════════════════════ #}
+            <aside class="sidebar" id="app-sidebar">
+                <div class="sidebar-card">
+                    <header class="sidebar-card-header">
+                        {# <span><i class="bx bxl-airbnb"></i></span >#}
+                        <span><i class="fas fa-filter"></i></span>
+                        <span>Filters</span>
+                        {% if selected_continent or selected_country or selected_city or search_query %}
+                            <a class="clear" href="?">Clear</a>
+                        {% endif %}
+                    </header>
+                    <div class="sidebar-card-body">
+
+                        <div class="filter-block">
+                            <label class="filter-label">Continent</label>
+                            <div class="continent-chips">
+                                <a href="?{% if search_query %}q={{ search_query|urlencode }}{% endif %}"
+                                   class="chip {% if not selected_continent %}active{% endif %}">All</a>
+                                {% for c in continents %}
+                                    <a href="?{% if search_query %}q={{ search_query|urlencode }}&{% endif %}continent={{ c.slug }}"
+                                       class="chip {% if c.slug == selected_continent %}active{% endif %}">{{ c.name }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="filter-block">
+                            <label class="filter-label">Countries</label>
+                            <div class="location-tree">
+                                {% for co in countries %}
+                                    <a class="tree-node {% if co.slug == selected_country %}active{% endif %}"
+                                       href="?{% if selected_continent %}continent={{ selected_continent }}&{% endif %}country={{ co.slug }}">
+                                        <span class="tree-node-name">{{ co.name }}</span>
+                                        <span class="tree-node-count">{{ co.city_count }}</span>
+                                    </a>
+                                {% empty %}
+                                    <p class="tree-empty">No countries available.</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </aside>
+
+            {# ══════════════════════════════════════════════════════════════════ #}
+            {# CONTENT                                                           #}
+            {# ══════════════════════════════════════════════════════════════════ #}
+            <main class="content">
+
+                <div class="content-shell">
+                    <div class="content-shell-body">
+
+                        {# ──────────────────────────────────────────────────────── #}
+                        {# State 1+2 — city grid (all cities, or filtered)          #}
+                        {# ──────────────────────────────────────────────────────── #}
+                        {% if not selected_city %}
+                            <div class="city-picker">
+                                {# style="background-image: url('{% static "img/city.jpg" %}')" #}
+
+                                <header class="city-picker-header">
+                                    <span class="city-picker-title">
+                                        {% if selected_country %}
+                                            {{ selected_country_obj.name }}
+                                        {% elif selected_continent %}
+                                            {{ selected_continent|title }}
+                                        {% else %}
+                                            All cities
+                                        {% endif %}
+                                    </span>
+                                    <span class="city-picker-count">
+                                        {{ country_cities|length }}
+                                        cit{{ country_cities|length|pluralize:"y,ies" }}
+                                    </span>
+                                </header>
+
+                                {% if country_cities %}
+                                    <div class="city-grid">
+                                        {% for city in country_cities %}
+                                            <a class="city-tile"
+                                               href="?continent={{ selected_continent|default:'' }}&country={{ city.country.slug }}&city={{ city.city_slug }}">
+                                                <span class="city-tile-icon">
+                                                    <i class="fas fa-city"></i>
+                                                </span>
+                                                <span class="city-tile-body">
+                                                    <span class="city-tile-name">
+                                                        {{ city.city|default:"(country archive)" }}
+                                                    </span>
+                                                    <span class="city-tile-region">
+                                                        {{ city.country.name }}{% if city.region %} · {{ city.region }}{% endif %}
+                                                    </span>
+                                                </span>
+                                                <span class="city-tile-arrow">
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </span>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <p class="city-picker-empty">
+                                        {% if search_query %}
+                                            No cities match “{{ search_query }}”.
+                                        {% else %}
+                                            No cities available.
+                                        {% endif %}
+                                    </p>
+                                {% endif %}
+
+                            </div>
+
+                        {# ──────────────────────────────────────────────────────── #}
+                        {# State 3 — city selected: the analytics dashboard         #}
+                        {# ──────────────────────────────────────────────────────── #}
+                        {% elif city_obj %}
+                            <div class="layout" id="dashboardLayout">
+
+                                {# ══════════════════════════════════════════════════════ #}
+                                {# Row 1 · Col 1 — Stats snapshot                        #}
+                                {# ══════════════════════════════════════════════════════ #}
+                                <section class="stats-container">
+                                    <header class="container-header">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <span class="snapshot-title" styles="font-size: small;">{{ city_obj.city|default:city_obj.country.name }}</span>
+                                        <span class="header-actions">{{ city_obj.region|default:city_obj.country.name }}</span>
+                                        <div class="header-actions">
+                                            <a class="header-back"
+                                               href="?{% if selected_continent %}continent={{ selected_continent }}&{% endif %}country={{ selected_country }}">
+                                                <i class="fas fa-arrow-left"></i>
+                                                <span>All cities</span>
+                                            </a>
+                                            <span class="badge">snapshot</span>
+                                        </div>
+                                    </header>
+
+                                    <div class="stats-grid">
+                                        <div class="data-card">
+                                            <span class="label">Listings</span>
+                                            <strong>{{ city_stats.n_listings|default_if_none:"—"|intcomma }}</strong>
+                                        </div>
+                                        <div class="data-card">
+                                            <span class="label">Avg price</span>
+                                            <strong>{% if city_stats.avg_price_usd %}${{ city_stats.avg_price_usd|floatformat:2 }}{% else %}—{% endif %}</strong>
+                                        </div>
+                                        <div class="data-card">
+                                            <span class="label">Currency</span>
+                                            <strong>{{ city_stats.currency_code|default:"—" }}</strong>
+                                            <span><small>{{ city_stats.avg_price_local|floatformat:2|intcomma }}</small></span>
+                                        </div>
+
+                                        <div class="data-card stat">
+                                            <span class="label">Avg nights</span>
+                                            <strong>{% if city_stats.avg_night_stays %}{{ city_stats.avg_night_stays|floatformat:1 }}{% else %}—{% endif %}</strong>
+                                            <div class="mini-box" id="box-nights"></div>
+                                        </div>
+                                        <div class="data-card stat">
+                                            <span class="label">Occupancy</span>
+                                            <strong>{% if city_stats.occupancy_rate is not None %}{{ city_stats.occupancy_rate|floatformat:0 }}%{% else %}—{% endif %}</strong>
+                                            <div class="mini-box" id="box-occupancy"></div>
+                                        </div>
+                                        <div class="data-card stat">
+                                            <span class="label">Multi-host</span>
+                                            <strong>{% if city_stats.multi_listing_share is not None %}{{ city_stats.multi_listing_share|floatformat:0 }}%{% else %}—{% endif %}</strong>
+                                            <div class="mini-box" id="box-multi-host"></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                {# ══════════════════════════════════════════════════════ #}
+                                {# Row 1 · Cols 2–4 — Accordions                         #}
+                                {# ══════════════════════════════════════════════════════ #}
+                                <section class="accordions-container">
+                                    <header class="container-header">
+                                        <i class="fas fa-layer-group"></i>
+                                        <span>Analytics</span>
+                                        {#<span class="badge">4 sections</span>#}
+                                    </header>
+
+                                    <div class="accordion-stack">
+                                        {{ city_charts|json_script:"city-charts-data" }}
+
+                                        {# ─── Listings ─────────────────────────────── #}
+                                        <section class="accordion collapsed" data-accordion>
+                                            <button class="accordion__head" type="button" aria-expanded="false">
+                                                <span class="accordion__chev">▸</span>
+                                                <i class="fas fa-home"></i>
+                                                Listings
+                                                <span class="badge">distributions &amp; categories</span>
+                                            </button>
+                                            <div class="accordion__body">
+                                                <div class="accordion__inner listings-layout">
+                                                    <div class="chart-cell" style="grid-area:c4">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-chart-area"></i>
+                                                            <span id="dist-title">Distribution</span>
+                                                            <span class="toggle-group" data-toggle-group="dist">
+                                                                <button class="toggle-btn active" data-value="price">Price</button>
+                                                                <button class="toggle-btn" data-value="revenue">Revenue</button>
+                                                                <button class="toggle-btn" data-value="reviews">Reviews</button>
+                                                                <button class="toggle-btn" data-value="occupancy">Occupancy</button>
+                                                                <button class="toggle-btn" data-value="host_listings">Hosts</button>
+                                                            </span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-distribution"></div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c3">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-building"></i><span>Property type</span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-property-type"></div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c1">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-door-open"></i><span>Room type</span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-room-type"></div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c2">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-users"></i><span>Max occupants</span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-max-occupants"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        {# ─── Availability ─────────────────────────── #}
+                                        <section class="accordion collapsed" data-accordion>
+                                            <button class="accordion__head" type="button" aria-expanded="false">
+                                                <span class="accordion__chev">▸</span>
+                                                <i class="fas fa-calendar-check"></i>
+                                                Availability
+                                                <span class="badge">forward calendar</span>
+                                            </button>
+                                            <div class="accordion__body">
+                                                <div class="accordion__inner availability-layout">
+
+                                                    {{ city_availability|json_script:"city-availability-data" }}
+
+                                                    <div class="chart-cell reviews-cards" style="grid-area:c1">
+                                                        <div class="rev-card">
+                                                            <span class="label">Next 30 days</span>
+                                                            <strong id="avail-card-30">—</strong>
+                                                        </div>
+                                                        <div class="rev-card">
+                                                            <span class="label">Next 60 days</span>
+                                                            <strong id="avail-card-60">—</strong>
+                                                        </div>
+                                                        <div class="rev-card">
+                                                            <span class="label">Next 90 days</span>
+                                                            <strong id="avail-card-90">—</strong>
+                                                        </div>
+                                                        <div class="rev-card">
+                                                            <span class="label">Next year</span>
+                                                            <strong id="avail-card-365">—</strong>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c2">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-calendar-week"></i><span>Weekday rhythm</span>
+                                                            <span class="cell-note" id="avail-weekday-note"></span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-avail-weekday"></div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c3">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-moon"></i><span>Minimum nights by month</span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-avail-min-nights"></div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c4">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-fire"></i><span>Forward availability</span>
+                                                            <span class="cell-note" id="avail-heat-note"></span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-avail-heatmap"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        {# ─── Reviews ──────────────────────────────── #}
+                                        <section class="accordion collapsed" data-accordion>
+                                            <button class="accordion__head" type="button" aria-expanded="false">
+                                                <span class="accordion__chev">▸</span>
+                                                <i class="fas fa-star"></i>
+                                                Reviews
+                                                <span class="badge">trends · ratings · text</span>
+                                            </button>
+                                            <div class="accordion__body">
+                                                <div class="accordion__inner reviews-layout">
+
+                                                    {{ city_reviews|json_script:"city-reviews-data" }}
+
+                                                    <div class="chart-cell reviews-cards" style="grid-area:c1">
+                                                        <div class="rev-card">
+                                                            <span class="label">Total reviews</span>
+                                                            <strong id="rev-card-total">—</strong>
+                                                        </div>
+                                                        <div class="rev-card">
+                                                            <span class="label">Avg rating</span>
+                                                            <strong id="rev-card-rating">—</strong>
+                                                        </div>
+                                                        <div class="rev-card">
+                                                            <span class="label">Avg length</span>
+                                                            <strong id="rev-card-avglen">—</strong>
+                                                        </div>
+                                                        <div class="rev-card">
+                                                            <span class="label">Median length</span>
+                                                            <strong id="rev-card-medlen">—</strong>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c2">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-star-half-stroke"></i><span>Score spread</span>
+                                                        </header>
+                                                        <div class="chart-cell-body review-boxes" id="chart-review-boxes"></div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c3">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-quote-left"></i>
+                                                            <span>Longest reviews</span>
+                                                            <span class="rev-sent-note" id="revSentNote"></span>
+                                                        </header>
+                                                        <div class="chart-cell-body rev-list-wrap">
+                                                            <div class="rev-list" id="revList">
+                                                                <div class="rev-placeholder">Loading…</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:c4">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-chart-line"></i>
+                                                            <span>Monthly reviews</span>
+                                                            <select class="rev-year-select" id="revYearMonthly"></select>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-rev-monthly"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        {# ─── Hosts ────────────────────────────────── #}
+                                        <section class="accordion collapsed" data-accordion>
+                                            <button class="accordion__head" type="button" aria-expanded="false">
+                                                <span class="accordion__chev">▸</span>
+                                                <i class="fas fa-user-tie"></i>
+                                                Hosts
+                                                <span class="badge">leaderboard · tenure · blocked</span>
+                                            </button>
+                                            <div class="accordion__body">
+                                                <div class="accordion__inner hosts-layout">
+
+                                                    <div class="chart-cell host-leaderboard" style="grid-area:leaderboard">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-crown"></i>
+                                                            <span>Top 50 by listings</span>
+
+                                                            <span class="host-donut-wrap" id="hostDonutWrap" style="display:none;"></span>
+                                                            <span class="'badge", style="font-size: 0.5rem;">% Superhosts</span>
+                                                        </header>
+                                                        <div class="chart-cell-body">
+                                                            <div class="host-snapshot-body">
+                                                                <div id="hostSnapshotPlaceholder">
+                                                                    <i class="fas fa-user-circle"></i>
+                                                                    <p>Loading host data…</p>
+                                                                </div>
+                                                                <div class="host-snapshot-list" id="hostSnapshotList" style="display:none;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:acceptance">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-user-check"></i>
+                                                            <span id="acceptance-title">Host metric</span>
+                                                            <span class="cell-note" id="acceptance-note"></span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-host-acceptance"></div>
+                                                    </div>
+
+                                                    <div class="chart-cell" style="grid-area:blocked">
+                                                        <header class="chart-cell-header">
+                                                            <i class="fas fa-ban"></i>
+                                                            <span>Host-blocked days</span>
+                                                            <span class="cell-note" id="blocked-note"></span>
+                                                        </header>
+                                                        <div class="chart-cell-body" id="chart-host-blocked"></div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                    </div>
+                                </section>
+
+                                {# ══════════════════════════════════════════════════════ #}
+                                {# Row 2 · Col 1 — Map                                   #}
+                                {# ══════════════════════════════════════════════════════ #}
+                                <div class="analytics-cell cell-map">
+                                    <header class="analytics-header">
+                                        <i class="fas fa-map-marked-alt"></i><span>Neighbourhoods</span>
+                                        {% if city_obj.is_country_archive %}
+                                            <span class="badge">country archive</span>
+                                        {% endif %}
+                                    </header>
+                                    <div class="analytics-body">
+                                        {% if city_datasets.neighbourhoods.status == "pending" %}
+                                            <p class="empty">
+                                                Map not downloaded.
+                                                <code>python manage.py sync_datasets --city {{ city_obj.city_slug }} --kind neighbourhoods</code>
+                                            </p>
+                                        {% elif city_datasets.neighbourhoods.status == "error" %}
+                                            <p class="error">{{ city_datasets.neighbourhoods.message }}</p>
+                                        {% elif city_datasets.neighbourhoods %}
+                                            {{ city_datasets.neighbourhoods|json_script:"neighbourhood-geojson" }}
+                                            <div id="neighbourhood-map" class="map"></div>
+                                            <div id="map-legend" class="map-legend-h"></div>
+                                            <div id="neighbourhood-tooltip" class="map-tooltip"></div>
+                                        {% else %}
+                                            <p class="empty">Map not available for this city.</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                {# ══════════════════════════════════════════════════════ #}
+                                {# Row 2 · Right — 3 cols × 2 rows                       #}
+                                {#   row 1: Superlatives | Neighbourhoods | Amenities    #}
+                                {#   row 2: Lead time    | Portfolio      | Amenities    #}
+                                {# ══════════════════════════════════════════════════════ #}
+                                <div class="bottom-right-group">
+
+                                    {{ city_superlatives|json_script:"city-superlatives-data" }}
+                                    {{ city_stats|json_script:"city-stats-data" }}
+                                    {{ city_hosts|json_script:"city-hosts-data" }}
+                                    {{ city_amenities|json_script:"city-amenities-data" }}
+
+                                    {# ── row 1 · col 1 — Superlatives ─────────────── #}
+                                    <div class="analytics-cell cell-superlatives">
+                                        <header class="analytics-header">
+                                            <i class="fas fa-medal"></i><span>Key Stats</span>
+                                            <span class="badge" id="superlatives-badge">—</span>
+                                        </header>
+                                        <div class="analytics-body no-pad">
+                                            <div class="superlatives-list" id="superlativesList">
+                                                <div class="superlatives-placeholder">Loading…</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {# ── row 1 · col 2 — Neighbourhoods ───────────── #}
+                                    <div class="analytics-cell cell-neighbourhoods">
+                                        <header class="analytics-header">
+                                            <i class="fas fa-map-pin"></i><span>Top 20</span>
+                                            <span class="badge" id="neighbourhoods-badge">—</span>
+                                        </header>
+                                        <div class="analytics-body no-pad">
+                                            <div class="neighbourhoods-list" id="neighbourhoodsList">
+                                                <div class="neighbourhoods-placeholder">Loading…</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {# ── row 1+2 · col 3 — Amenities ──────────────── #}
+                                    <div class="analytics-cell cell-amenities">
+                                        <header class="analytics-header">
+                                            <i class="fas fa-suitcase"></i><span>Amenities</span>
+                                            <span class="badge" id="amenities-badge">—</span>
+                                        </header>
+                                        <div class="analytics-body no-pad">
+                                            <div class="amenities-list" id="amenitiesList">
+                                                <div class="amenities-placeholder">Loading…</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {# ── row 2 · col 1 — Booking lead time ────────── #}
+                                    <div class="analytics-cell cell-lead-time">
+                                        <header class="analytics-header">
+                                            <i class="fas fa-calendar-day"></i><span>Booking lead time</span>
+                                            <span class="badge" id="lead-time-badge">—</span>
+                                        </header>
+                                        <div class="analytics-body" id="chart-lead-time"></div>
+                                    </div>
+
+                                    {# ── row 2 · col 2 — Portfolio split ──────────── #}
+                                    <div class="analytics-cell cell-portfolio">
+                                        <header class="analytics-header">
+                                            <i class="fas fa-layer-group"></i><span>Portfolio split</span>
+                                            <span class="badge" id="portfolio-badge">—</span>
+                                        </header>
+                                        <div class="analytics-body" id="chart-portfolio"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+
+        {# ══════════════════════════════════════════════════════════════════════ #}
+        {# SCRIPTS                                                               #}
+        {# ══════════════════════════════════════════════════════════════════════ #}
+        <script src="{% static 'js/city_list/sidebar.js' %}"></script>
+
+        {% if selected_city and city_obj %}
+            <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+            {% if city_datasets.neighbourhoods %}
+                <script src="{% static 'js/city_list/map.js' %}?v=3"></script>
+            {% endif %}
+            <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/dist/plot.umd.min.js"></script>
+            <script src="{% static 'js/city_list/draw_box_plots.js' %}?v=4"></script>
+            <script src="{% static 'js/city_list/draw_listings_charts.js' %}?v=8"></script>
+            <script src="{% static 'js/city_list/draw_hosts_charts.js' %}?v=4"></script>
+            <script src="{% static 'js/city_list/draw_reviews_charts.js' %}?v=8"></script>
+            <script src="{% static 'js/city_list/draw_availabilities_charts.js' %}"></script>
+            <script src="{% static 'js/city_list/draw_superlatives_cards.js' %}?v=6"></script>
+            <script src="{% static 'js/city_list/draw_neighbourhoods_charts.js' %}?v=4"></script>
+            <script src="{% static 'js/city_list/draw_amenities_charts.js' %}"></script>
+            <script src="{% static 'js/city_list/draw_leadtime_charts.js' %}?v=5"></script>
+            <script src="{% static 'js/city_list/draw_portfolio_charts.js' %}?v=4"></script>
+            <script src="{% static 'js/city_list/draw_snapshot_boxes_charts.js' %}?v=1"></script>
+        {% endif %}
+
+        {% if selected_city and city_obj %}
+            <script>
+                /* ─────────────────────────────────────────────────────────────
+                   Button-toggle accordion controller.
+
+                   • Clicking a header opens that accordion, closes all others.
+                   • Layout gets .has-open-accordion when any is open, so the
+                     accordions container can span both grid rows.
+                   • Charts re-render at several checkpoints after every toggle
+                     to catch the final size regardless of transition timing.
+                   ───────────────────────────────────────────────────────────── */
+                (function () {
+                    "use strict";
+
+                    const layout = document.getElementById("dashboardLayout");
+                    if (!layout) return;
+
+                    const accordions = Array.from(layout.querySelectorAll("[data-accordion]"));
+                    if (!accordions.length) return;
+
+                    function setCollapsed(acc, state) {
+                        acc.classList.toggle("collapsed", state);
+                        const head = acc.querySelector(".accordion__head");
+                        if (head) head.setAttribute("aria-expanded", String(!state));
+                    }
+
+                    function syncLayoutClass() {
+                        const anyOpen = accordions.some(a => !a.classList.contains("collapsed"));
+                        layout.classList.toggle("has-open-accordion", anyOpen);
+                    }
+
+                    let raf = null;
+                    function redraw() {
+                        if (raf) return;
+                        raf = requestAnimationFrame(() => {
+                            raf = null;
+                            window.dispatchEvent(new Event("resize"));
+                        });
+                    }
+
+                    accordions.forEach((acc) => {
+                        const head = acc.querySelector(".accordion__head");
+                        if (!head) return;
+
+                        head.addEventListener("click", () => {
+                            const willOpen = acc.classList.contains("collapsed");
+
+                            if (willOpen) {
+                                accordions.forEach(other => {
+                                    if (other !== acc) setCollapsed(other, true);
+                                });
+                                setCollapsed(acc, false);
+                            } else {
+                                setCollapsed(acc, true);
+                            }
+
+                            syncLayoutClass();
+                            redraw();
+                            setTimeout(redraw, 60);
+                            setTimeout(redraw, 200);
+                            setTimeout(redraw, 460);
+                            setTimeout(redraw, 800);
+                        });
+                    });
+
+                    syncLayoutClass();
+                })();
+            </script>
+        {% endif %}
+
+    </body>
+</html>
