@@ -36,7 +36,7 @@ class CityAdmin(admin.ModelAdmin):
     search_fields = ("city", "city_slug", "region", "country__name")
     autocomplete_fields = ("country",)
     prepopulated_fields = {"city_slug": ("city",)}
-    readonly_fields = ("city_slug",) if False else ()  # keep editable for now
+    readonly_fields = ("city_slug",) if False else ()
 
     @admin.display(description="Continent", ordering="country__continent__name")
     def continent_name(self, obj: City) -> str:
