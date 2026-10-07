@@ -8,7 +8,7 @@
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/city_list/style.css' %}?v=11">
+        <link rel="stylesheet" href="{% static 'css/city_list/styles.css' %}?v=11">
     </head>
     <body>
 
@@ -577,7 +577,7 @@
         {% if selected_city and city_obj %}
             <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
             {% if city_datasets.neighbourhoods %}
-                <script src="{% static 'js/city_list/map.js' %}?v=3"></script>
+                <script src="{% static 'js/city_list/draw_city_map.js' %}?v=3"></script>
             {% endif %}
             <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/dist/plot.umd.min.js"></script>
             <script src="{% static 'js/city_list/draw_box_plots.js' %}?v=4"></script>

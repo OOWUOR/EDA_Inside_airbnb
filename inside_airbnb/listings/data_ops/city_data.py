@@ -33,7 +33,7 @@ class CityData:
     EXPLORE_URL = "https://insideairbnb.com/explore/"
     DATA_URL = "https://insideairbnb.com/get-the-data/"
     DEFAULT_FIXTURE_PATH = (
-        Path(__file__).parent / "fixtures" / "insideairbnb_cities.json"
+        Path(__file__).parent.parent / "fixtures" / "insideairbnb_cities.json"
     )
 
     APP_LABEL = "listings"

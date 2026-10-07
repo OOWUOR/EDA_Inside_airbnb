@@ -25,7 +25,7 @@ WISE_URL = "https://wise.com/gb/currency-converter/usd-to-{code}-rate?amount=1"
 class CurrencyData:
     """Scrape IBAN + Wise and emit a Django fixture of Currency rows."""
 
-    DEFAULT_FIXTURE_PATH = Path(__file__).parent / "fixtures" / "currencies.json"
+    DEFAULT_FIXTURE_PATH = Path(__file__).parent.parent / "fixtures" / "currencies.json"
     APP_LABEL = "listings"
 
     # Substring rules applied in order to the *lowercased* IBAN country name.

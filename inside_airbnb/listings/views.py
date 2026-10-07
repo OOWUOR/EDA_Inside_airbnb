@@ -3,7 +3,7 @@ from django.db.models import Count, Q
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 
-from data_ops.datasets import (compute_city_amenities,
+from .data_ops.datasets import (compute_city_amenities,
                                compute_city_availability, compute_city_charts,
                                compute_city_hosts, compute_city_reviews,
                                compute_city_stats, compute_city_superlatives,

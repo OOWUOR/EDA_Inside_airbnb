@@ -1,0 +1,2631 @@
+[
+  {
+    "model": "listings.continent",
+    "pk": 1,
+    "fields": {
+      "name": "Africa",
+      "slug": "africa",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "listings.continent",
+    "pk": 2,
+    "fields": {
+      "name": "Asia-Pacific",
+      "slug": "asia-pacific",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "listings.continent",
+    "pk": 3,
+    "fields": {
+      "name": "Europe",
+      "slug": "europe",
+      "display_order": 3
+    }
+  },
+  {
+    "model": "listings.continent",
+    "pk": 4,
+    "fields": {
+      "name": "Latin America",
+      "slug": "latin-america",
+      "display_order": 4
+    }
+  },
+  {
+    "model": "listings.continent",
+    "pk": 5,
+    "fields": {
+      "name": "North America",
+      "slug": "north-america",
+      "display_order": 5
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 1,
+    "fields": {
+      "name": "Kenya",
+      "slug": "kenya",
+      "continent": 1,
+      "display_order": 1
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 2,
+    "fields": {
+      "name": "South Africa",
+      "slug": "south-africa",
+      "continent": 1,
+      "display_order": 2
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 3,
+    "fields": {
+      "name": "Australia",
+      "slug": "australia",
+      "continent": 2,
+      "display_order": 3
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 4,
+    "fields": {
+      "name": "China",
+      "slug": "china",
+      "continent": 2,
+      "display_order": 4
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 5,
+    "fields": {
+      "name": "Japan",
+      "slug": "japan",
+      "continent": 2,
+      "display_order": 5
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 6,
+    "fields": {
+      "name": "New Zealand",
+      "slug": "new-zealand",
+      "continent": 2,
+      "display_order": 6
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 7,
+    "fields": {
+      "name": "Singapore",
+      "slug": "singapore",
+      "continent": 2,
+      "display_order": 7
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 8,
+    "fields": {
+      "name": "Taiwan",
+      "slug": "taiwan",
+      "continent": 2,
+      "display_order": 8
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 9,
+    "fields": {
+      "name": "Thailand",
+      "slug": "thailand",
+      "continent": 2,
+      "display_order": 9
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 10,
+    "fields": {
+      "name": "Austria",
+      "slug": "austria",
+      "continent": 3,
+      "display_order": 10
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 11,
+    "fields": {
+      "name": "Belgium",
+      "slug": "belgium",
+      "continent": 3,
+      "display_order": 11
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 12,
+    "fields": {
+      "name": "Czech Republic",
+      "slug": "czech-republic",
+      "continent": 3,
+      "display_order": 12
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 13,
+    "fields": {
+      "name": "Denmark",
+      "slug": "denmark",
+      "continent": 3,
+      "display_order": 13
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 14,
+    "fields": {
+      "name": "France",
+      "slug": "france",
+      "continent": 3,
+      "display_order": 14
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 15,
+    "fields": {
+      "name": "Germany",
+      "slug": "germany",
+      "continent": 3,
+      "display_order": 15
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 16,
+    "fields": {
+      "name": "Greece",
+      "slug": "greece",
+      "continent": 3,
+      "display_order": 16
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 17,
+    "fields": {
+      "name": "Hungary",
+      "slug": "hungary",
+      "continent": 3,
+      "display_order": 17
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 18,
+    "fields": {
+      "name": "Ireland",
+      "slug": "ireland",
+      "continent": 3,
+      "display_order": 18
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 19,
+    "fields": {
+      "name": "Italy",
+      "slug": "italy",
+      "continent": 3,
+      "display_order": 19
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 20,
+    "fields": {
+      "name": "Latvia",
+      "slug": "latvia",
+      "continent": 3,
+      "display_order": 20
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 21,
+    "fields": {
+      "name": "Malta",
+      "slug": "malta",
+      "continent": 3,
+      "display_order": 21
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 22,
+    "fields": {
+      "name": "Norway",
+      "slug": "norway",
+      "continent": 3,
+      "display_order": 22
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 23,
+    "fields": {
+      "name": "Portugal",
+      "slug": "portugal",
+      "continent": 3,
+      "display_order": 23
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 24,
+    "fields": {
+      "name": "Spain",
+      "slug": "spain",
+      "continent": 3,
+      "display_order": 24
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 25,
+    "fields": {
+      "name": "Sweden",
+      "slug": "sweden",
+      "continent": 3,
+      "display_order": 25
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 26,
+    "fields": {
+      "name": "Switzerland",
+      "slug": "switzerland",
+      "continent": 3,
+      "display_order": 26
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 27,
+    "fields": {
+      "name": "The Netherlands",
+      "slug": "the-netherlands",
+      "continent": 3,
+      "display_order": 27
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 28,
+    "fields": {
+      "name": "Turkey",
+      "slug": "turkey",
+      "continent": 3,
+      "display_order": 28
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 29,
+    "fields": {
+      "name": "United Kingdom",
+      "slug": "united-kingdom",
+      "continent": 3,
+      "display_order": 29
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 30,
+    "fields": {
+      "name": "Argentina",
+      "slug": "argentina",
+      "continent": 4,
+      "display_order": 30
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 31,
+    "fields": {
+      "name": "Belize",
+      "slug": "belize",
+      "continent": 4,
+      "display_order": 31
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 32,
+    "fields": {
+      "name": "Brazil",
+      "slug": "brazil",
+      "continent": 4,
+      "display_order": 32
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 33,
+    "fields": {
+      "name": "Chile",
+      "slug": "chile",
+      "continent": 4,
+      "display_order": 33
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 34,
+    "fields": {
+      "name": "Colombia",
+      "slug": "colombia",
+      "continent": 4,
+      "display_order": 34
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 35,
+    "fields": {
+      "name": "Mexico",
+      "slug": "mexico",
+      "continent": 4,
+      "display_order": 35
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 36,
+    "fields": {
+      "name": "Canada",
+      "slug": "canada",
+      "continent": 5,
+      "display_order": 36
+    }
+  },
+  {
+    "model": "listings.country",
+    "pk": 37,
+    "fields": {
+      "name": "United States",
+      "slug": "united-states",
+      "continent": 5,
+      "display_order": 37
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 1,
+    "fields": {
+      "country": 1,
+      "city": "Nairobi",
+      "city_slug": "nairobi",
+      "region": "Nairobi",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/kenya/nairobi/nairobi/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/kenya/nairobi/nairobi/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/kenya/nairobi/nairobi/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/kenya/nairobi/nairobi/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/kenya/nairobi/nairobi/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/kenya/nairobi/nairobi/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/kenya/nairobi/nairobi/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 2,
+    "fields": {
+      "country": 2,
+      "city": "Cape Town",
+      "city_slug": "cape-town",
+      "region": "Western Cape",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/south-africa/wc/cape-town/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/south-africa/wc/cape-town/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/south-africa/wc/cape-town/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/south-africa/wc/cape-town/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/south-africa/wc/cape-town/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/south-africa/wc/cape-town/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/south-africa/wc/cape-town/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 3,
+    "fields": {
+      "country": 3,
+      "city": "Barossa Valley",
+      "city_slug": "barossa-valley",
+      "region": "South Australia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/sa/barossa-valley/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/sa/barossa-valley/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/sa/barossa-valley/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/sa/barossa-valley/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/sa/barossa-valley/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/sa/barossa-valley/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/sa/barossa-valley/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 4,
+    "fields": {
+      "country": 3,
+      "city": "Barwon South West, Vic",
+      "city_slug": "barwon-south-west-vic",
+      "region": "Victoria",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/vic/barwon-south-west-vic/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/vic/barwon-south-west-vic/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/vic/barwon-south-west-vic/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/vic/barwon-south-west-vic/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/vic/barwon-south-west-vic/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/vic/barwon-south-west-vic/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/vic/barwon-south-west-vic/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 5,
+    "fields": {
+      "country": 3,
+      "city": "Brisbane",
+      "city_slug": "brisbane",
+      "region": "Queensland",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/qld/brisbane/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/qld/brisbane/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/qld/brisbane/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/qld/brisbane/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/qld/brisbane/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/qld/brisbane/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/qld/brisbane/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 6,
+    "fields": {
+      "country": 3,
+      "city": "Melbourne",
+      "city_slug": "melbourne",
+      "region": "Victoria",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/vic/melbourne/2026-06-16/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/vic/melbourne/2026-06-16/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/vic/melbourne/2026-06-16/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/vic/melbourne/2026-06-16/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/vic/melbourne/2026-06-16/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/vic/melbourne/2026-06-16/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/vic/melbourne/2026-06-16/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 7,
+    "fields": {
+      "country": 3,
+      "city": "Mid North Coast",
+      "city_slug": "mid-north-coast",
+      "region": "New South Wales",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/nsw/mid-north-coast/2026-06-19/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/nsw/mid-north-coast/2026-06-19/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/nsw/mid-north-coast/2026-06-19/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/nsw/mid-north-coast/2026-06-19/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/nsw/mid-north-coast/2026-06-19/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/nsw/mid-north-coast/2026-06-19/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/nsw/mid-north-coast/2026-06-19/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 8,
+    "fields": {
+      "country": 3,
+      "city": "Mornington Peninsula",
+      "city_slug": "mornington-peninsula",
+      "region": "Victoria",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/vic/mornington-peninsula/2026-06-22/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/vic/mornington-peninsula/2026-06-22/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/vic/mornington-peninsula/2026-06-22/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/vic/mornington-peninsula/2026-06-22/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/vic/mornington-peninsula/2026-06-22/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/vic/mornington-peninsula/2026-06-22/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/vic/mornington-peninsula/2026-06-22/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 9,
+    "fields": {
+      "country": 3,
+      "city": "Northern Rivers",
+      "city_slug": "northern-rivers",
+      "region": "New South Wales",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/nsw/northern-rivers/2026-06-24/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/nsw/northern-rivers/2026-06-24/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/nsw/northern-rivers/2026-06-24/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/nsw/northern-rivers/2026-06-24/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/nsw/northern-rivers/2026-06-24/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/nsw/northern-rivers/2026-06-24/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/nsw/northern-rivers/2026-06-24/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 10,
+    "fields": {
+      "country": 3,
+      "city": "Sunshine Coast",
+      "city_slug": "sunshine-coast",
+      "region": "Queensland",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/qld/sunshine-coast/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/qld/sunshine-coast/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/qld/sunshine-coast/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/qld/sunshine-coast/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/qld/sunshine-coast/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/qld/sunshine-coast/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/qld/sunshine-coast/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 11,
+    "fields": {
+      "country": 3,
+      "city": "Sydney",
+      "city_slug": "sydney",
+      "region": "New South Wales",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/nsw/sydney/2026-06-16/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 12,
+    "fields": {
+      "country": 3,
+      "city": "Tasmania",
+      "city_slug": "tasmania",
+      "region": "Tasmania",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/tas/tasmania/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/tas/tasmania/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/tas/tasmania/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/tas/tasmania/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/tas/tasmania/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/tas/tasmania/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/tas/tasmania/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 13,
+    "fields": {
+      "country": 3,
+      "city": "Western Australia",
+      "city_slug": "western-australia",
+      "region": "Western Australia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/australia/wa/western-australia/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/australia/wa/western-australia/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/australia/wa/western-australia/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/australia/wa/western-australia/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/australia/wa/western-australia/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/australia/wa/western-australia/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/australia/wa/western-australia/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 14,
+    "fields": {
+      "country": 4,
+      "city": "Hong Kong",
+      "city_slug": "hong-kong",
+      "region": "Hong Kong",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/china/hk/hong-kong/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/china/hk/hong-kong/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/china/hk/hong-kong/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/china/hk/hong-kong/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/china/hk/hong-kong/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/china/hk/hong-kong/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/china/hk/hong-kong/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 15,
+    "fields": {
+      "country": 5,
+      "city": "Tokyo",
+      "city_slug": "tokyo",
+      "region": "Kantō",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/japan/kantō/tokyo/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/japan/kantō/tokyo/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/japan/kantō/tokyo/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/japan/kantō/tokyo/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/japan/kantō/tokyo/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/japan/kantō/tokyo/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/japan/kantō/tokyo/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 16,
+    "fields": {
+      "country": 6,
+      "city": "New Zealand",
+      "city_slug": "new-zealand",
+      "region": NaN,
+      "is_country_archive": true,
+      "listings_csv_gz": "https://data.insideairbnb.com/new-zealand/2026-08-13/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/new-zealand/2026-08-13/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/new-zealand/2026-08-13/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/new-zealand/2026-08-13/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/new-zealand/2026-08-13/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/new-zealand/2026-08-13/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/new-zealand/2026-08-13/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 17,
+    "fields": {
+      "country": 7,
+      "city": "Singapore",
+      "city_slug": "singapore",
+      "region": "Singapore",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/singapore/sg/singapore/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/singapore/sg/singapore/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/singapore/sg/singapore/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/singapore/sg/singapore/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/singapore/sg/singapore/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/singapore/sg/singapore/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/singapore/sg/singapore/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 18,
+    "fields": {
+      "country": 8,
+      "city": "Taipei",
+      "city_slug": "taipei",
+      "region": "Northern Taiwan",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/taiwan/northern-taiwan/taipei/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/taiwan/northern-taiwan/taipei/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/taiwan/northern-taiwan/taipei/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/taiwan/northern-taiwan/taipei/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/taiwan/northern-taiwan/taipei/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/taiwan/northern-taiwan/taipei/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/taiwan/northern-taiwan/taipei/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 19,
+    "fields": {
+      "country": 9,
+      "city": "Bangkok",
+      "city_slug": "bangkok",
+      "region": "Central Thailand",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/thailand/central-thailand/bangkok/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/thailand/central-thailand/bangkok/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/thailand/central-thailand/bangkok/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/thailand/central-thailand/bangkok/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/thailand/central-thailand/bangkok/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/thailand/central-thailand/bangkok/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/thailand/central-thailand/bangkok/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 20,
+    "fields": {
+      "country": 10,
+      "city": "Vienna",
+      "city_slug": "vienna",
+      "region": "Vienna",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/austria/vienna/vienna/2026-06-20/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/austria/vienna/vienna/2026-06-20/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/austria/vienna/vienna/2026-06-20/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/austria/vienna/vienna/2026-06-20/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/austria/vienna/vienna/2026-06-20/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/austria/vienna/vienna/2026-06-20/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/austria/vienna/vienna/2026-06-20/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 21,
+    "fields": {
+      "country": 11,
+      "city": "Antwerp",
+      "city_slug": "antwerp",
+      "region": "Flemish Region",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/belgium/vlg/antwerp/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/belgium/vlg/antwerp/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/belgium/vlg/antwerp/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/belgium/vlg/antwerp/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/belgium/vlg/antwerp/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/belgium/vlg/antwerp/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/belgium/vlg/antwerp/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 22,
+    "fields": {
+      "country": 11,
+      "city": "Brussels",
+      "city_slug": "brussels",
+      "region": "Brussels",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/belgium/bru/brussels/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/belgium/bru/brussels/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/belgium/bru/brussels/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/belgium/bru/brussels/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/belgium/bru/brussels/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/belgium/bru/brussels/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/belgium/bru/brussels/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 23,
+    "fields": {
+      "country": 11,
+      "city": "Ghent",
+      "city_slug": "ghent",
+      "region": "Flemish Region",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/belgium/vlg/ghent/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/belgium/vlg/ghent/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/belgium/vlg/ghent/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/belgium/vlg/ghent/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/belgium/vlg/ghent/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/belgium/vlg/ghent/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/belgium/vlg/ghent/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 24,
+    "fields": {
+      "country": 12,
+      "city": "Prague",
+      "city_slug": "prague",
+      "region": "Prague",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/czech-republic/prague/prague/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 25,
+    "fields": {
+      "country": 13,
+      "city": "Copenhagen",
+      "city_slug": "copenhagen",
+      "region": "Hovedstaden",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/denmark/hovedstaden/copenhagen/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 26,
+    "fields": {
+      "country": 14,
+      "city": "Bordeaux",
+      "city_slug": "bordeaux",
+      "region": "Nouvelle-Aquitaine",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/france/nouvelle-aquitaine/bordeaux/2026-06-22/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/france/nouvelle-aquitaine/bordeaux/2026-06-22/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/france/nouvelle-aquitaine/bordeaux/2026-06-22/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/france/nouvelle-aquitaine/bordeaux/2026-06-22/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/france/nouvelle-aquitaine/bordeaux/2026-06-22/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/france/nouvelle-aquitaine/bordeaux/2026-06-22/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/france/nouvelle-aquitaine/bordeaux/2026-06-22/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 27,
+    "fields": {
+      "country": 14,
+      "city": "Lyon",
+      "city_slug": "lyon",
+      "region": "Auvergne-Rhone-Alpes",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/france/auvergne-rhone-alpes/lyon/2026-06-22/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/france/auvergne-rhone-alpes/lyon/2026-06-22/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/france/auvergne-rhone-alpes/lyon/2026-06-22/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/france/auvergne-rhone-alpes/lyon/2026-06-22/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/france/auvergne-rhone-alpes/lyon/2026-06-22/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/france/auvergne-rhone-alpes/lyon/2026-06-22/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/france/auvergne-rhone-alpes/lyon/2026-06-22/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 28,
+    "fields": {
+      "country": 14,
+      "city": "Paris",
+      "city_slug": "paris",
+      "region": "Île-de-France",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/france/ile-de-france/paris/2026-06-16/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/france/ile-de-france/paris/2026-06-16/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/france/ile-de-france/paris/2026-06-16/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/france/ile-de-france/paris/2026-06-16/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/france/ile-de-france/paris/2026-06-16/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/france/ile-de-france/paris/2026-06-16/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/france/ile-de-france/paris/2026-06-16/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 29,
+    "fields": {
+      "country": 14,
+      "city": "Pays Basque",
+      "city_slug": "pays-basque",
+      "region": "Pyrénées-Atlantiques",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/france/pyrénées-atlantiques/pays-basque/2026-06-23/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/france/pyrénées-atlantiques/pays-basque/2026-06-23/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/france/pyrénées-atlantiques/pays-basque/2026-06-23/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/france/pyrénées-atlantiques/pays-basque/2026-06-23/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/france/pyrénées-atlantiques/pays-basque/2026-06-23/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/france/pyrénées-atlantiques/pays-basque/2026-06-23/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/france/pyrénées-atlantiques/pays-basque/2026-06-23/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 30,
+    "fields": {
+      "country": 15,
+      "city": "Berlin",
+      "city_slug": "berlin",
+      "region": "Berlin",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/germany/be/berlin/2026-06-26/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/germany/be/berlin/2026-06-26/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/germany/be/berlin/2026-06-26/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/germany/be/berlin/2026-06-26/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/germany/be/berlin/2026-06-26/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/germany/be/berlin/2026-06-26/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/germany/be/berlin/2026-06-26/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 31,
+    "fields": {
+      "country": 15,
+      "city": "Munich",
+      "city_slug": "munich",
+      "region": "Bavaria",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/germany/bv/munich/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/germany/bv/munich/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/germany/bv/munich/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/germany/bv/munich/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/germany/bv/munich/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/germany/bv/munich/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/germany/bv/munich/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 32,
+    "fields": {
+      "country": 16,
+      "city": "Athens",
+      "city_slug": "athens",
+      "region": "Attica",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/greece/attica/athens/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/greece/attica/athens/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/greece/attica/athens/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/greece/attica/athens/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/greece/attica/athens/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/greece/attica/athens/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/greece/attica/athens/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 33,
+    "fields": {
+      "country": 16,
+      "city": "Crete",
+      "city_slug": "crete",
+      "region": "Crete",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/greece/crete/crete/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/greece/crete/crete/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/greece/crete/crete/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/greece/crete/crete/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/greece/crete/crete/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/greece/crete/crete/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/greece/crete/crete/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 34,
+    "fields": {
+      "country": 16,
+      "city": "South Aegean",
+      "city_slug": "south-aegean",
+      "region": "South Aegean",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/greece/south-aegean/south-aegean/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/greece/south-aegean/south-aegean/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/greece/south-aegean/south-aegean/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/greece/south-aegean/south-aegean/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/greece/south-aegean/south-aegean/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/greece/south-aegean/south-aegean/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/greece/south-aegean/south-aegean/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 35,
+    "fields": {
+      "country": 16,
+      "city": "Thessaloniki",
+      "city_slug": "thessaloniki",
+      "region": "Central Macedonia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/greece/central-macedonia/thessaloniki/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/greece/central-macedonia/thessaloniki/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/greece/central-macedonia/thessaloniki/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/greece/central-macedonia/thessaloniki/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/greece/central-macedonia/thessaloniki/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/greece/central-macedonia/thessaloniki/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/greece/central-macedonia/thessaloniki/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 36,
+    "fields": {
+      "country": 17,
+      "city": "Budapest",
+      "city_slug": "budapest",
+      "region": "Közép-Magyarország",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/hungary/közép-magyarország/budapest/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/hungary/közép-magyarország/budapest/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/hungary/közép-magyarország/budapest/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/hungary/közép-magyarország/budapest/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/hungary/közép-magyarország/budapest/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/hungary/közép-magyarország/budapest/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/hungary/közép-magyarország/budapest/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 37,
+    "fields": {
+      "country": 18,
+      "city": "Dublin",
+      "city_slug": "dublin",
+      "region": "Leinster",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/ireland/leinster/dublin/2026-06-21/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/ireland/leinster/dublin/2026-06-21/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/ireland/leinster/dublin/2026-06-21/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/ireland/leinster/dublin/2026-06-21/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/ireland/leinster/dublin/2026-06-21/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/ireland/leinster/dublin/2026-06-21/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/ireland/leinster/dublin/2026-06-21/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 38,
+    "fields": {
+      "country": 18,
+      "city": "Ireland",
+      "city_slug": "ireland",
+      "region": NaN,
+      "is_country_archive": true,
+      "listings_csv_gz": "https://data.insideairbnb.com/ireland/2026-06-21/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/ireland/2026-06-21/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/ireland/2026-06-21/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/ireland/2026-06-21/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/ireland/2026-06-21/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/ireland/2026-06-21/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/ireland/2026-06-21/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 39,
+    "fields": {
+      "country": 19,
+      "city": "Bergamo",
+      "city_slug": "bergamo",
+      "region": "Lombardia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/lombardia/bergamo/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/lombardia/bergamo/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/lombardia/bergamo/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/lombardia/bergamo/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/lombardia/bergamo/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/lombardia/bergamo/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/lombardia/bergamo/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 40,
+    "fields": {
+      "country": 19,
+      "city": "Bologna",
+      "city_slug": "bologna",
+      "region": "Emilia-Romagna",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/emilia-romagna/bologna/2026-06-26/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/emilia-romagna/bologna/2026-06-26/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/emilia-romagna/bologna/2026-06-26/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/emilia-romagna/bologna/2026-06-26/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/emilia-romagna/bologna/2026-06-26/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/emilia-romagna/bologna/2026-06-26/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/emilia-romagna/bologna/2026-06-26/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 41,
+    "fields": {
+      "country": 19,
+      "city": "Florence",
+      "city_slug": "florence",
+      "region": "Toscana",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/toscana/florence/2026-06-26/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/toscana/florence/2026-06-26/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/toscana/florence/2026-06-26/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/toscana/florence/2026-06-26/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/toscana/florence/2026-06-26/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/toscana/florence/2026-06-26/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/toscana/florence/2026-06-26/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 42,
+    "fields": {
+      "country": 19,
+      "city": "Milan",
+      "city_slug": "milan",
+      "region": "Lombardy",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/lombardy/milan/2026-06-25/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/lombardy/milan/2026-06-25/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/lombardy/milan/2026-06-25/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/lombardy/milan/2026-06-25/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/lombardy/milan/2026-06-25/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/lombardy/milan/2026-06-25/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/lombardy/milan/2026-06-25/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 43,
+    "fields": {
+      "country": 19,
+      "city": "Naples",
+      "city_slug": "naples",
+      "region": "Campania",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/campania/naples/2026-06-25/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/campania/naples/2026-06-25/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/campania/naples/2026-06-25/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/campania/naples/2026-06-25/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/campania/naples/2026-06-25/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/campania/naples/2026-06-25/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/campania/naples/2026-06-25/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 44,
+    "fields": {
+      "country": 19,
+      "city": "Puglia",
+      "city_slug": "puglia",
+      "region": "Puglia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/puglia/puglia/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/puglia/puglia/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/puglia/puglia/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/puglia/puglia/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/puglia/puglia/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/puglia/puglia/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/puglia/puglia/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 45,
+    "fields": {
+      "country": 19,
+      "city": "Rome",
+      "city_slug": "rome",
+      "region": "Lazio",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/lazio/rome/2026-06-20/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/lazio/rome/2026-06-20/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/lazio/rome/2026-06-20/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/lazio/rome/2026-06-20/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/lazio/rome/2026-06-20/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/lazio/rome/2026-06-20/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/lazio/rome/2026-06-20/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 46,
+    "fields": {
+      "country": 19,
+      "city": "Sicily",
+      "city_slug": "sicily",
+      "region": "Sicilia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/sicilia/sicily/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/sicilia/sicily/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/sicilia/sicily/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/sicilia/sicily/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/sicilia/sicily/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/sicilia/sicily/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/sicilia/sicily/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 47,
+    "fields": {
+      "country": 19,
+      "city": "Trentino",
+      "city_slug": "trentino",
+      "region": "Trentino-Alto Adige/Südtirol",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/trentino-alto-adige-südtirol/trentino/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/trentino-alto-adige-südtirol/trentino/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/trentino-alto-adige-südtirol/trentino/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/trentino-alto-adige-südtirol/trentino/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/trentino-alto-adige-südtirol/trentino/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/trentino-alto-adige-südtirol/trentino/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/trentino-alto-adige-südtirol/trentino/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 48,
+    "fields": {
+      "country": 19,
+      "city": "Venice",
+      "city_slug": "venice",
+      "region": "Veneto",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/italy/veneto/venice/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/italy/veneto/venice/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/italy/veneto/venice/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/italy/veneto/venice/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/italy/veneto/venice/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/italy/veneto/venice/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/italy/veneto/venice/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 49,
+    "fields": {
+      "country": 20,
+      "city": "Riga",
+      "city_slug": "riga",
+      "region": "Riga",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/latvia/riga/riga/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/latvia/riga/riga/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/latvia/riga/riga/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/latvia/riga/riga/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/latvia/riga/riga/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/latvia/riga/riga/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/latvia/riga/riga/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 50,
+    "fields": {
+      "country": 21,
+      "city": "Malta",
+      "city_slug": "malta",
+      "region": NaN,
+      "is_country_archive": true,
+      "listings_csv_gz": "https://data.insideairbnb.com/malta/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/malta/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/malta/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/malta/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/malta/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/malta/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/malta/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 51,
+    "fields": {
+      "country": 22,
+      "city": "Oslo",
+      "city_slug": "oslo",
+      "region": "Oslo",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/norway/oslo/oslo/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 52,
+    "fields": {
+      "country": 23,
+      "city": "Lisbon",
+      "city_slug": "lisbon",
+      "region": "Lisbon",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/portugal/lisbon/lisbon/2026-06-23/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/portugal/lisbon/lisbon/2026-06-23/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/portugal/lisbon/lisbon/2026-06-23/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/portugal/lisbon/lisbon/2026-06-23/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/portugal/lisbon/lisbon/2026-06-23/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/portugal/lisbon/lisbon/2026-06-23/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/portugal/lisbon/lisbon/2026-06-23/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 53,
+    "fields": {
+      "country": 23,
+      "city": "Porto",
+      "city_slug": "porto",
+      "region": "Norte",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 54,
+    "fields": {
+      "country": 24,
+      "city": "Barcelona",
+      "city_slug": "barcelona",
+      "region": "Catalonia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/catalonia/barcelona/2026-06-24/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/catalonia/barcelona/2026-06-24/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/catalonia/barcelona/2026-06-24/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/catalonia/barcelona/2026-06-24/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/catalonia/barcelona/2026-06-24/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/catalonia/barcelona/2026-06-24/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/catalonia/barcelona/2026-06-24/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 55,
+    "fields": {
+      "country": 24,
+      "city": "Euskadi",
+      "city_slug": "euskadi",
+      "region": "Euskadi",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/pv/euskadi/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/pv/euskadi/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/pv/euskadi/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/pv/euskadi/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/pv/euskadi/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/pv/euskadi/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/pv/euskadi/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 56,
+    "fields": {
+      "country": 24,
+      "city": "Girona",
+      "city_slug": "girona",
+      "region": "Catalonia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/catalonia/girona/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/catalonia/girona/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/catalonia/girona/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/catalonia/girona/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/catalonia/girona/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/catalonia/girona/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/catalonia/girona/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 57,
+    "fields": {
+      "country": 24,
+      "city": "Madrid",
+      "city_slug": "madrid",
+      "region": "Comunidad de Madrid",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2026-06-20/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2026-06-20/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2026-06-20/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2026-06-20/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2026-06-20/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2026-06-20/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2026-06-20/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 58,
+    "fields": {
+      "country": 24,
+      "city": "Malaga",
+      "city_slug": "malaga",
+      "region": "Andalucía",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/andalucía/malaga/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/andalucía/malaga/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/andalucía/malaga/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/andalucía/malaga/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/andalucía/malaga/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/andalucía/malaga/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/andalucía/malaga/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 59,
+    "fields": {
+      "country": 24,
+      "city": "Mallorca",
+      "city_slug": "mallorca",
+      "region": "Islas Baleares",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/islas-baleares/mallorca/2026-06-23/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/islas-baleares/mallorca/2026-06-23/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/islas-baleares/mallorca/2026-06-23/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/islas-baleares/mallorca/2026-06-23/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/islas-baleares/mallorca/2026-06-23/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/islas-baleares/mallorca/2026-06-23/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/islas-baleares/mallorca/2026-06-23/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 60,
+    "fields": {
+      "country": 24,
+      "city": "Menorca",
+      "city_slug": "menorca",
+      "region": "Islas Baleares",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/islas-baleares/menorca/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/islas-baleares/menorca/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/islas-baleares/menorca/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/islas-baleares/menorca/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/islas-baleares/menorca/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/islas-baleares/menorca/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/islas-baleares/menorca/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 61,
+    "fields": {
+      "country": 24,
+      "city": "Sevilla",
+      "city_slug": "sevilla",
+      "region": "Andalucía",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/andalucía/sevilla/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/andalucía/sevilla/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/andalucía/sevilla/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/andalucía/sevilla/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/andalucía/sevilla/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/andalucía/sevilla/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/andalucía/sevilla/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 62,
+    "fields": {
+      "country": 24,
+      "city": "Valencia",
+      "city_slug": "valencia",
+      "region": "Valencia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/spain/vc/valencia/2026-06-26/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/spain/vc/valencia/2026-06-26/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/spain/vc/valencia/2026-06-26/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/spain/vc/valencia/2026-06-26/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/spain/vc/valencia/2026-06-26/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/spain/vc/valencia/2026-06-26/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/spain/vc/valencia/2026-06-26/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 63,
+    "fields": {
+      "country": 25,
+      "city": "Stockholm",
+      "city_slug": "stockholm",
+      "region": "Stockholms län",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/sweden/stockholms-län/stockholm/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 64,
+    "fields": {
+      "country": 26,
+      "city": "Geneva",
+      "city_slug": "geneva",
+      "region": "Geneva",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/switzerland/geneva/geneva/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/switzerland/geneva/geneva/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/switzerland/geneva/geneva/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/switzerland/geneva/geneva/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/switzerland/geneva/geneva/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/switzerland/geneva/geneva/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/switzerland/geneva/geneva/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 65,
+    "fields": {
+      "country": 26,
+      "city": "Vaud",
+      "city_slug": "vaud",
+      "region": "Vaud",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/switzerland/vd/vaud/2026-08-10/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/switzerland/vd/vaud/2026-08-10/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/switzerland/vd/vaud/2026-08-10/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/switzerland/vd/vaud/2026-08-10/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/switzerland/vd/vaud/2026-08-10/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/switzerland/vd/vaud/2026-08-10/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/switzerland/vd/vaud/2026-08-10/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 66,
+    "fields": {
+      "country": 26,
+      "city": "Zurich",
+      "city_slug": "zurich",
+      "region": "Zürich",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/switzerland/zürich/zurich/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/switzerland/zürich/zurich/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/switzerland/zürich/zurich/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/switzerland/zürich/zurich/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/switzerland/zürich/zurich/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/switzerland/zürich/zurich/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/switzerland/zürich/zurich/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 67,
+    "fields": {
+      "country": 27,
+      "city": "Amsterdam",
+      "city_slug": "amsterdam",
+      "region": "North Holland",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 68,
+    "fields": {
+      "country": 27,
+      "city": "Rotterdam",
+      "city_slug": "rotterdam",
+      "region": "South Holland",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/the-netherlands/south-holland/rotterdam/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/the-netherlands/south-holland/rotterdam/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/the-netherlands/south-holland/rotterdam/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/the-netherlands/south-holland/rotterdam/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/the-netherlands/south-holland/rotterdam/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/the-netherlands/south-holland/rotterdam/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/the-netherlands/south-holland/rotterdam/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 69,
+    "fields": {
+      "country": 27,
+      "city": "The Hague",
+      "city_slug": "the-hague",
+      "region": "South Holland",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/the-netherlands/south-holland/the-hague/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/the-netherlands/south-holland/the-hague/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/the-netherlands/south-holland/the-hague/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/the-netherlands/south-holland/the-hague/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/the-netherlands/south-holland/the-hague/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/the-netherlands/south-holland/the-hague/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/the-netherlands/south-holland/the-hague/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 70,
+    "fields": {
+      "country": 28,
+      "city": "Istanbul",
+      "city_slug": "istanbul",
+      "region": "Marmara",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/turkey/marmara/istanbul/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/turkey/marmara/istanbul/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/turkey/marmara/istanbul/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/turkey/marmara/istanbul/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/turkey/marmara/istanbul/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/turkey/marmara/istanbul/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/turkey/marmara/istanbul/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 71,
+    "fields": {
+      "country": 29,
+      "city": "Bristol",
+      "city_slug": "bristol",
+      "region": "England",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/bristol/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/bristol/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/bristol/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-kingdom/england/bristol/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-kingdom/england/bristol/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-kingdom/england/bristol/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-kingdom/england/bristol/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 72,
+    "fields": {
+      "country": 29,
+      "city": "Edinburgh",
+      "city_slug": "edinburgh",
+      "region": "Scotland",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-kingdom/scotland/edinburgh/2026-06-23/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-kingdom/scotland/edinburgh/2026-06-23/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-kingdom/scotland/edinburgh/2026-06-23/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-kingdom/scotland/edinburgh/2026-06-23/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-kingdom/scotland/edinburgh/2026-06-23/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-kingdom/scotland/edinburgh/2026-06-23/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-kingdom/scotland/edinburgh/2026-06-23/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 73,
+    "fields": {
+      "country": 29,
+      "city": "Greater Manchester",
+      "city_slug": "greater-manchester",
+      "region": "England",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/greater-manchester/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/greater-manchester/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/greater-manchester/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-kingdom/england/greater-manchester/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-kingdom/england/greater-manchester/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-kingdom/england/greater-manchester/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-kingdom/england/greater-manchester/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 74,
+    "fields": {
+      "country": 29,
+      "city": "London",
+      "city_slug": "london",
+      "region": "England",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/london/2026-06-19/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/london/2026-06-19/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-kingdom/england/london/2026-06-19/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-kingdom/england/london/2026-06-19/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-kingdom/england/london/2026-06-19/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-kingdom/england/london/2026-06-19/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-kingdom/england/london/2026-06-19/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 75,
+    "fields": {
+      "country": 30,
+      "city": "Buenos Aires",
+      "city_slug": "buenos-aires",
+      "region": "Ciudad Autónoma de Buenos Aires",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/argentina/ciudad-autónoma-de-buenos-aires/buenos-aires/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/argentina/ciudad-autónoma-de-buenos-aires/buenos-aires/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/argentina/ciudad-autónoma-de-buenos-aires/buenos-aires/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/argentina/ciudad-autónoma-de-buenos-aires/buenos-aires/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/argentina/ciudad-autónoma-de-buenos-aires/buenos-aires/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/argentina/ciudad-autónoma-de-buenos-aires/buenos-aires/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/argentina/ciudad-autónoma-de-buenos-aires/buenos-aires/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 76,
+    "fields": {
+      "country": 31,
+      "city": "Belize",
+      "city_slug": "belize",
+      "region": "Belize",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/belize/bz/belize/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/belize/bz/belize/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/belize/bz/belize/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/belize/bz/belize/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/belize/bz/belize/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/belize/bz/belize/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/belize/bz/belize/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 77,
+    "fields": {
+      "country": 32,
+      "city": "Rio de Janeiro",
+      "city_slug": "rio-de-janeiro",
+      "region": "Rio de Janeiro",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2026-06-24/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2026-06-24/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2026-06-24/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2026-06-24/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2026-06-24/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2026-06-24/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/brazil/rj/rio-de-janeiro/2026-06-24/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 78,
+    "fields": {
+      "country": 32,
+      "city": "São Paulo",
+      "city_slug": "são-paulo",
+      "region": "São Paulo",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/brazil/sp/são-paulo/2026-06-14/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/brazil/sp/são-paulo/2026-06-14/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/brazil/sp/são-paulo/2026-06-14/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/brazil/sp/são-paulo/2026-06-14/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/brazil/sp/são-paulo/2026-06-14/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/brazil/sp/são-paulo/2026-06-14/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/brazil/sp/são-paulo/2026-06-14/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 79,
+    "fields": {
+      "country": 33,
+      "city": "Santiago",
+      "city_slug": "santiago",
+      "region": "Región Metropolitana de Santiago",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/chile/rm/santiago/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/chile/rm/santiago/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/chile/rm/santiago/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/chile/rm/santiago/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/chile/rm/santiago/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/chile/rm/santiago/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/chile/rm/santiago/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 80,
+    "fields": {
+      "country": 34,
+      "city": "Bogotá",
+      "city_slug": "bogotá",
+      "region": "Distrito Capital",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/colombia/dc/bogotá/2026-06-21/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/colombia/dc/bogotá/2026-06-21/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/colombia/dc/bogotá/2026-06-21/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/colombia/dc/bogotá/2026-06-21/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/colombia/dc/bogotá/2026-06-21/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/colombia/dc/bogotá/2026-06-21/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/colombia/dc/bogotá/2026-06-21/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 81,
+    "fields": {
+      "country": 35,
+      "city": "Mexico City",
+      "city_slug": "mexico-city",
+      "region": "Distrito Federal",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/mexico/df/mexico-city/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/mexico/df/mexico-city/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/mexico/df/mexico-city/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/mexico/df/mexico-city/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/mexico/df/mexico-city/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/mexico/df/mexico-city/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/mexico/df/mexico-city/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 82,
+    "fields": {
+      "country": 36,
+      "city": "Montreal",
+      "city_slug": "montreal",
+      "region": "Quebec",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/canada/qc/montreal/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/canada/qc/montreal/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/canada/qc/montreal/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/canada/qc/montreal/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/canada/qc/montreal/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/canada/qc/montreal/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/canada/qc/montreal/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 83,
+    "fields": {
+      "country": 36,
+      "city": "New Brunswick",
+      "city_slug": "new-brunswick",
+      "region": "New Brunswick",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/canada/nb/new-brunswick/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/canada/nb/new-brunswick/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/canada/nb/new-brunswick/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/canada/nb/new-brunswick/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/canada/nb/new-brunswick/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/canada/nb/new-brunswick/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/canada/nb/new-brunswick/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 84,
+    "fields": {
+      "country": 36,
+      "city": "Ottawa",
+      "city_slug": "ottawa",
+      "region": "Ontario",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/canada/on/ottawa/2026-06-24/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/canada/on/ottawa/2026-06-24/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/canada/on/ottawa/2026-06-24/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/canada/on/ottawa/2026-06-24/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/canada/on/ottawa/2026-06-24/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/canada/on/ottawa/2026-06-24/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/canada/on/ottawa/2026-06-24/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 85,
+    "fields": {
+      "country": 36,
+      "city": "Quebec City",
+      "city_slug": "quebec-city",
+      "region": "Quebec",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/canada/qc/quebec-city/2026-06-19/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/canada/qc/quebec-city/2026-06-19/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/canada/qc/quebec-city/2026-06-19/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/canada/qc/quebec-city/2026-06-19/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/canada/qc/quebec-city/2026-06-19/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/canada/qc/quebec-city/2026-06-19/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/canada/qc/quebec-city/2026-06-19/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 86,
+    "fields": {
+      "country": 36,
+      "city": "Toronto",
+      "city_slug": "toronto",
+      "region": "Ontario",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/canada/on/toronto/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/canada/on/toronto/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/canada/on/toronto/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/canada/on/toronto/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/canada/on/toronto/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/canada/on/toronto/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/canada/on/toronto/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 87,
+    "fields": {
+      "country": 36,
+      "city": "Vancouver",
+      "city_slug": "vancouver",
+      "region": "British Columbia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/canada/bc/vancouver/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/canada/bc/vancouver/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/canada/bc/vancouver/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/canada/bc/vancouver/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/canada/bc/vancouver/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/canada/bc/vancouver/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/canada/bc/vancouver/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 88,
+    "fields": {
+      "country": 36,
+      "city": "Victoria",
+      "city_slug": "victoria",
+      "region": "British Columbia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/canada/bc/victoria/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/canada/bc/victoria/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/canada/bc/victoria/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/canada/bc/victoria/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/canada/bc/victoria/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/canada/bc/victoria/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/canada/bc/victoria/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 89,
+    "fields": {
+      "country": 36,
+      "city": "Winnipeg",
+      "city_slug": "winnipeg",
+      "region": "Manitoba",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/canada/mb/winnipeg/2026-06-22/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/canada/mb/winnipeg/2026-06-22/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/canada/mb/winnipeg/2026-06-22/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/canada/mb/winnipeg/2026-06-22/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/canada/mb/winnipeg/2026-06-22/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/canada/mb/winnipeg/2026-06-22/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/canada/mb/winnipeg/2026-06-22/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 90,
+    "fields": {
+      "country": 37,
+      "city": "Albany",
+      "city_slug": "albany",
+      "region": "New York",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ny/albany/2026-06-16/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ny/albany/2026-06-16/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ny/albany/2026-06-16/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ny/albany/2026-06-16/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ny/albany/2026-06-16/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ny/albany/2026-06-16/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ny/albany/2026-06-16/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 91,
+    "fields": {
+      "country": 37,
+      "city": "Asheville",
+      "city_slug": "asheville",
+      "region": "North Carolina",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/nc/asheville/2026-06-25/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/nc/asheville/2026-06-25/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/nc/asheville/2026-06-25/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/nc/asheville/2026-06-25/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/nc/asheville/2026-06-25/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/nc/asheville/2026-06-25/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/nc/asheville/2026-06-25/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 92,
+    "fields": {
+      "country": 37,
+      "city": "Austin",
+      "city_slug": "austin",
+      "region": "Texas",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/tx/austin/2026-06-22/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/tx/austin/2026-06-22/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/tx/austin/2026-06-22/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/tx/austin/2026-06-22/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/tx/austin/2026-06-22/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/tx/austin/2026-06-22/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/tx/austin/2026-06-22/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 93,
+    "fields": {
+      "country": 37,
+      "city": "Boston",
+      "city_slug": "boston",
+      "region": "Massachusetts",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ma/boston/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ma/boston/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ma/boston/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ma/boston/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ma/boston/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ma/boston/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ma/boston/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 94,
+    "fields": {
+      "country": 37,
+      "city": "Bozeman",
+      "city_slug": "bozeman",
+      "region": "Montana",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/mt/bozeman/2026-06-19/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/mt/bozeman/2026-06-19/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/mt/bozeman/2026-06-19/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/mt/bozeman/2026-06-19/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/mt/bozeman/2026-06-19/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/mt/bozeman/2026-06-19/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/mt/bozeman/2026-06-19/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 95,
+    "fields": {
+      "country": 37,
+      "city": "Broward County",
+      "city_slug": "broward-county",
+      "region": "Florida",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/fl/broward-county/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/fl/broward-county/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/fl/broward-county/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/fl/broward-county/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/fl/broward-county/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/fl/broward-county/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/fl/broward-county/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 96,
+    "fields": {
+      "country": 37,
+      "city": "Cambridge",
+      "city_slug": "cambridge",
+      "region": "Massachusetts",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ma/cambridge/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ma/cambridge/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ma/cambridge/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ma/cambridge/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ma/cambridge/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ma/cambridge/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ma/cambridge/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 97,
+    "fields": {
+      "country": 37,
+      "city": "Chicago",
+      "city_slug": "chicago",
+      "region": "Illinois",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/il/chicago/2026-06-24/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/il/chicago/2026-06-24/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/il/chicago/2026-06-24/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/il/chicago/2026-06-24/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/il/chicago/2026-06-24/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/il/chicago/2026-06-24/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/il/chicago/2026-06-24/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 98,
+    "fields": {
+      "country": 37,
+      "city": "Clark County, NV",
+      "city_slug": "clark-county-nv",
+      "region": "Nevada",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/nv/clark-county-nv/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/nv/clark-county-nv/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/nv/clark-county-nv/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/nv/clark-county-nv/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/nv/clark-county-nv/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/nv/clark-county-nv/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/nv/clark-county-nv/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 99,
+    "fields": {
+      "country": 37,
+      "city": "Columbus",
+      "city_slug": "columbus",
+      "region": "Ohio",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/oh/columbus/2026-06-29/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/oh/columbus/2026-06-29/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/oh/columbus/2026-06-29/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/oh/columbus/2026-06-29/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/oh/columbus/2026-06-29/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/oh/columbus/2026-06-29/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/oh/columbus/2026-06-29/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 100,
+    "fields": {
+      "country": 37,
+      "city": "Dallas",
+      "city_slug": "dallas",
+      "region": "Texas",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/tx/dallas/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/tx/dallas/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/tx/dallas/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/tx/dallas/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/tx/dallas/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/tx/dallas/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/tx/dallas/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 101,
+    "fields": {
+      "country": 37,
+      "city": "Denver",
+      "city_slug": "denver",
+      "region": "Colorado",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/co/denver/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/co/denver/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/co/denver/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/co/denver/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/co/denver/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/co/denver/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/co/denver/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 102,
+    "fields": {
+      "country": 37,
+      "city": "Fort Worth",
+      "city_slug": "fort-worth",
+      "region": "Texas",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/tx/fort-worth/2026-06-21/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/tx/fort-worth/2026-06-21/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/tx/fort-worth/2026-06-21/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/tx/fort-worth/2026-06-21/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/tx/fort-worth/2026-06-21/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/tx/fort-worth/2026-06-21/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/tx/fort-worth/2026-06-21/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 103,
+    "fields": {
+      "country": 37,
+      "city": "Hawaii",
+      "city_slug": "hawaii",
+      "region": "Hawaii",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/hi/hawaii/2026-06-21/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/hi/hawaii/2026-06-21/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/hi/hawaii/2026-06-21/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/hi/hawaii/2026-06-21/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/hi/hawaii/2026-06-21/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/hi/hawaii/2026-06-21/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/hi/hawaii/2026-06-21/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 104,
+    "fields": {
+      "country": 37,
+      "city": "Jersey City",
+      "city_slug": "jersey-city",
+      "region": "New Jersey",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/nj/jersey-city/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/nj/jersey-city/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/nj/jersey-city/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/nj/jersey-city/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/nj/jersey-city/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/nj/jersey-city/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/nj/jersey-city/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 105,
+    "fields": {
+      "country": 37,
+      "city": "Los Angeles",
+      "city_slug": "los-angeles",
+      "region": "California",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ca/los-angeles/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ca/los-angeles/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ca/los-angeles/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ca/los-angeles/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ca/los-angeles/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ca/los-angeles/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ca/los-angeles/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 106,
+    "fields": {
+      "country": 37,
+      "city": "Nashville",
+      "city_slug": "nashville",
+      "region": "Tennessee",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/tn/nashville/2026-06-26/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/tn/nashville/2026-06-26/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/tn/nashville/2026-06-26/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/tn/nashville/2026-06-26/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/tn/nashville/2026-06-26/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/tn/nashville/2026-06-26/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/tn/nashville/2026-06-26/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 107,
+    "fields": {
+      "country": 37,
+      "city": "New Orleans",
+      "city_slug": "new-orleans",
+      "region": "Louisiana",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/la/new-orleans/2026-06-16/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/la/new-orleans/2026-06-16/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/la/new-orleans/2026-06-16/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/la/new-orleans/2026-06-16/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/la/new-orleans/2026-06-16/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/la/new-orleans/2026-06-16/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/la/new-orleans/2026-06-16/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 108,
+    "fields": {
+      "country": 37,
+      "city": "New York City",
+      "city_slug": "new-york-city",
+      "region": "New York",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ny/new-york-city/2026-06-14/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ny/new-york-city/2026-06-14/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ny/new-york-city/2026-06-14/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ny/new-york-city/2026-06-14/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ny/new-york-city/2026-06-14/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ny/new-york-city/2026-06-14/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ny/new-york-city/2026-06-14/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 109,
+    "fields": {
+      "country": 37,
+      "city": "Newark",
+      "city_slug": "newark",
+      "region": "New Jersey",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/nj/newark/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/nj/newark/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/nj/newark/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/nj/newark/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/nj/newark/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/nj/newark/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/nj/newark/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 110,
+    "fields": {
+      "country": 37,
+      "city": "Oakland",
+      "city_slug": "oakland",
+      "region": "California",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ca/oakland/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ca/oakland/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ca/oakland/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ca/oakland/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ca/oakland/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ca/oakland/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ca/oakland/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 111,
+    "fields": {
+      "country": 37,
+      "city": "Pacific Grove",
+      "city_slug": "pacific-grove",
+      "region": "California",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ca/pacific-grove/2026-06-14/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ca/pacific-grove/2026-06-14/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ca/pacific-grove/2026-06-14/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ca/pacific-grove/2026-06-14/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ca/pacific-grove/2026-06-14/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ca/pacific-grove/2026-06-14/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ca/pacific-grove/2026-06-14/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 112,
+    "fields": {
+      "country": 37,
+      "city": "Portland",
+      "city_slug": "portland",
+      "region": "Oregon",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/or/portland/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/or/portland/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/or/portland/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/or/portland/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/or/portland/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/or/portland/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/or/portland/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 113,
+    "fields": {
+      "country": 37,
+      "city": "Rhode Island",
+      "city_slug": "rhode-island",
+      "region": "Rhode Island",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ri/rhode-island/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ri/rhode-island/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ri/rhode-island/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ri/rhode-island/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ri/rhode-island/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ri/rhode-island/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ri/rhode-island/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 114,
+    "fields": {
+      "country": 37,
+      "city": "Rochester",
+      "city_slug": "rochester",
+      "region": "New York",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ny/rochester/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ny/rochester/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ny/rochester/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ny/rochester/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ny/rochester/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ny/rochester/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ny/rochester/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 115,
+    "fields": {
+      "country": 37,
+      "city": "Salem, OR",
+      "city_slug": "salem-or",
+      "region": "Oregon",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/or/salem-or/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/or/salem-or/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/or/salem-or/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/or/salem-or/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/or/salem-or/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/or/salem-or/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/or/salem-or/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 116,
+    "fields": {
+      "country": 37,
+      "city": "San Diego",
+      "city_slug": "san-diego",
+      "region": "California",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-diego/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-diego/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-diego/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ca/san-diego/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ca/san-diego/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ca/san-diego/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ca/san-diego/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 117,
+    "fields": {
+      "country": 37,
+      "city": "San Francisco",
+      "city_slug": "san-francisco",
+      "region": "California",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-francisco/2026-06-14/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-francisco/2026-06-14/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-francisco/2026-06-14/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ca/san-francisco/2026-06-14/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ca/san-francisco/2026-06-14/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ca/san-francisco/2026-06-14/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ca/san-francisco/2026-06-14/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 118,
+    "fields": {
+      "country": 37,
+      "city": "San Mateo County",
+      "city_slug": "san-mateo-county",
+      "region": "California",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-mateo-county/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-mateo-county/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ca/san-mateo-county/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ca/san-mateo-county/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ca/san-mateo-county/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ca/san-mateo-county/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ca/san-mateo-county/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 119,
+    "fields": {
+      "country": 37,
+      "city": "Santa Clara County",
+      "city_slug": "santa-clara-county",
+      "region": "California",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ca/santa-clara-county/2026-06-28/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ca/santa-clara-county/2026-06-28/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ca/santa-clara-county/2026-06-28/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ca/santa-clara-county/2026-06-28/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ca/santa-clara-county/2026-06-28/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ca/santa-clara-county/2026-06-28/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ca/santa-clara-county/2026-06-28/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 120,
+    "fields": {
+      "country": 37,
+      "city": "Santa Cruz County",
+      "city_slug": "santa-cruz-county",
+      "region": "California",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/ca/santa-cruz-county/2026-06-30/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/ca/santa-cruz-county/2026-06-30/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/ca/santa-cruz-county/2026-06-30/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/ca/santa-cruz-county/2026-06-30/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/ca/santa-cruz-county/2026-06-30/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/ca/santa-cruz-county/2026-06-30/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/ca/santa-cruz-county/2026-06-30/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 121,
+    "fields": {
+      "country": 37,
+      "city": "Seattle",
+      "city_slug": "seattle",
+      "region": "Washington",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/wa/seattle/2026-06-15/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/wa/seattle/2026-06-15/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/wa/seattle/2026-06-15/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/wa/seattle/2026-06-15/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/wa/seattle/2026-06-15/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/wa/seattle/2026-06-15/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/wa/seattle/2026-06-15/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 122,
+    "fields": {
+      "country": 37,
+      "city": "Twin Cities MSA",
+      "city_slug": "twin-cities-msa",
+      "region": "Minnesota",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/mn/twin-cities-msa/2026-06-27/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/mn/twin-cities-msa/2026-06-27/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/mn/twin-cities-msa/2026-06-27/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/mn/twin-cities-msa/2026-06-27/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/mn/twin-cities-msa/2026-06-27/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/mn/twin-cities-msa/2026-06-27/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/mn/twin-cities-msa/2026-06-27/visualisations/neighbourhoods.geojson"
+    }
+  },
+  {
+    "model": "listings.city",
+    "pk": 123,
+    "fields": {
+      "country": 37,
+      "city": "Washington, D.C.",
+      "city_slug": "washington-dc",
+      "region": "District of Columbia",
+      "is_country_archive": false,
+      "listings_csv_gz": "https://data.insideairbnb.com/united-states/dc/washington-dc/2026-06-24/data/listings.csv.gz",
+      "calendar_csv_gz": "https://data.insideairbnb.com/united-states/dc/washington-dc/2026-06-24/data/calendar.csv.gz",
+      "reviews_csv_gz": "https://data.insideairbnb.com/united-states/dc/washington-dc/2026-06-24/data/reviews.csv.gz",
+      "listings_csv": "https://data.insideairbnb.com/united-states/dc/washington-dc/2026-06-24/visualisations/listings.csv",
+      "reviews_csv": "https://data.insideairbnb.com/united-states/dc/washington-dc/2026-06-24/visualisations/reviews.csv",
+      "neighbourhoods_csv": "https://data.insideairbnb.com/united-states/dc/washington-dc/2026-06-24/visualisations/neighbourhoods.csv",
+      "neighbourhoods_geojson": "https://data.insideairbnb.com/united-states/dc/washington-dc/2026-06-24/visualisations/neighbourhoods.geojson"
+    }
+  }
+]
