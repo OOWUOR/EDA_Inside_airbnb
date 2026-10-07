@@ -4,7 +4,7 @@ Uses
 - Pandas for data preprocessing and analysis,
 - Fetches data using requests and beautifulsoup
 - Make plots using D3JS
-- 
+- Draws from Antonio Melé's Django 5 by Example and Interactive Data Visualization for the Web by Scott Murray
 ### Start Page shows list of all cities
 <img width="3024" height="1700" alt="image" src="https://github.com/user-attachments/assets/a009798f-1413-4879-8618-2389fc28aeda" />
 
