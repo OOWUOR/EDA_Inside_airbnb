@@ -393,6 +393,23 @@ button { font-family: inherit; }
 .container-header .header-back:hover i {
   transform: translateX(-2px);
 }
+.container-header .snapshot-subtitle {
+  font-size: .68rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding-left: .55rem;
+  margin-left: .1rem;
+  border-left: 1px solid var(--border);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+/* Hide the region on tight widths so the title never gets squeezed out */
+@media (max-width: 760px) {
+  .container-header .snapshot-subtitle { display: none; }
+}
 
 /* The badge inside header-actions should not have its own auto margin */
 .container-header .header-actions .badge {
