@@ -48,7 +48,7 @@ Accordion panels open in place to reveal the Listings, Availability, Reviews, an
 | Layer | What |
 | --- | --- |
 | Web framework | Django 5 |
-| Data wrangling | pandas, NumPy |
+| Data wrangling | (geo)pandas, NumPy |
 | Scraping | requests + BeautifulSoup |
 | Static charts | Observable Plot |
 | Interactive map | D3 (choropleth) |
