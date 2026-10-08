@@ -171,15 +171,22 @@
                                 {# ══════════════════════════════════════════════════════ #}
                                 <section class="stats-container">
                                     <header class="container-header">
-                                        <i class="fas fa-chart-pie"></i>
-                                        <span class="snapshot-title" styles="font-size: small;">{{ city_obj.city|default:city_obj.country.name }}</span>
-                                        <span class="header-actions">{{ city_obj.region|default:city_obj.country.name }}</span>
-                                        <div class="header-actions">
-                                            <a class="header-back"
-                                               href="?{% if selected_continent %}continent={{ selected_continent }}&{% endif %}country={{ selected_country }}">
-                                                <i class="fas fa-arrow-left"></i>
-                                                <span>All cities</span>
-                                            </a>
+                                      <i class="fas fa-chart-pie"></i>
+
+                                      <span class="snapshot-title">
+                                        {{ city_obj.city|default:city_obj.country.name }}
+                                      </span>
+
+                                      <span class="snapshot-subtitle">
+                                        {{ city_obj.region|default:city_obj.country.name }}
+                                      </span>
+
+                                       <div class="header-actions">
+                                                <a class="header-back"
+                                                href="?country={{ city_obj.country.slug }}{% if selected_continent %}&continent={{ selected_continent }}{% endif %}">
+                                                  <i class="fas fa-arrow-left"></i>
+                                                  <span>All cities</span>
+                                                </a>
                                             <span class="badge">snapshot</span>
                                         </div>
                                     </header>
