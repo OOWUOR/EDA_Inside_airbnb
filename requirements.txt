@@ -1,0 +1,9 @@
+numpy
+pandas
+geopandas
+curl_cffi
+beautifulsoup4
+lxml
+django
+django-humanize
+django-mathfilters
