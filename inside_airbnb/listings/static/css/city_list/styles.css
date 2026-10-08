@@ -459,6 +459,79 @@ button { font-family: inherit; }
 }
 .data-card .verdict-box span::first-letter { text-transform: uppercase; }
 
+/* ── Mini-box tooltips ─────────────────────────────────────────── */
+.box-tip {
+  position: fixed;
+  z-index: 200;
+  max-width: 280px;
+  padding: .55rem .7rem;
+  border-radius: 6px;
+  background: #1f2328;
+  color: #f1f3f5;
+  font-size: .7rem;
+  line-height: 1.4;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .22);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity .12s ease, transform .12s ease;
+}
+
+.box-tip.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.box-tip strong {
+  display: inline-block;
+  margin-bottom: .15rem;
+  color: #ff8ba0;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.box-tip hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, .14);
+  margin: .45rem 0 .35rem;
+}
+
+.box-tip .box-tip-range { color: #d1d5db; }
+.box-tip .box-tip-range b { color: #fff; font-weight: 600; }
+
+/* Arrow — anchored to the box centre via --anchor-x */
+.box-tip::before {
+  content: "";
+  position: absolute;
+  left: var(--anchor-x, 50%);
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border: 5px solid transparent;
+}
+
+.box-tip:not(.is-flipped)::before {
+  bottom: 100%;
+  border-bottom-color: #1f2328;
+}
+
+.box-tip.is-flipped::before {
+  top: 100%;
+  border-top-color: #1f2328;
+}
+
+/* Make the anchor visibly interactive */
+.mini-box {
+  cursor: help;
+  outline: none;
+}
+
+.mini-box:focus-visible {
+  outline: 2px solid #ff385c;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
 /* ══════════════════════════════════════════════════════════════════════
    ACCORDIONS — button-toggle, flex-grow swap
    ══════════════════════════════════════════════════════════════════════ */

@@ -15,6 +15,9 @@
  * Default metric is "count" (listings).  Every metric's palette is
  * ascending (low = near-white, high = near-rose) except "price_asc",
  * which is inverted so the cheapest neighbourhoods are deepest rose.
+ *
+ * Works with any GeoJSON source: US Census TIGER (already CW),
+ * GeoPandas / QGIS / GADM / HDX (CCW — normalised below), etc.
  */
 (function () {
   "use strict";
@@ -34,6 +37,62 @@
     console.error("map.js: invalid GeoJSON", err);
     return;
   }
+
+  /* ------------------------------------------------------------------ */
+  /* Normalise ring winding for D3 (spherical polygon interpretation)    */
+  /*                                                                     */
+  /* D3 wants exterior rings to be CLOCKWISE. Spec-compliant files from  */
+  /* GeoPandas/QGIS (RFC 7946) are COUNTER-clockwise, which makes D3     */
+  /* treat each polygon as "the whole globe minus a hole", producing     */
+  /* the famous solid-blue / blank map.                                  */
+  /*                                                                     */
+  /* Idempotent: already-CW rings are left alone, so this is safe for    */
+  /* US Census / ArcGIS / HDX / GADM sources alike.                      */
+  /* ------------------------------------------------------------------ */
+  (function rewindForD3() {
+    let flipped = 0;
+    let kept = 0;
+
+    function rewindRing(ring) {
+      if (!Array.isArray(ring) || ring.length < 4) return ring;
+      let s = 0;
+      for (let i = 0; i < ring.length - 1; i++) {
+        const [x1, y1] = ring[i];
+        const [x2, y2] = ring[i + 1];
+        s += (x2 - x1) * (y2 + y1);
+      }
+      // s < 0 → CCW → reverse to make CW (D3-friendly)
+      if (s < 0) {
+        flipped++;
+        return ring.slice().reverse();
+      }
+      kept++;
+      return ring;
+    }
+
+    function rewindPolygon(coords) {
+      // coords = array of rings; ring 0 is exterior, rest are holes.
+      return coords.map((ring, i) => (i === 0 ? rewindRing(ring) : ring));
+    }
+
+    function rewindGeometry(geom) {
+      if (!geom || !geom.coordinates) return;
+      if (geom.type === "Polygon") {
+        geom.coordinates = rewindPolygon(geom.coordinates);
+      } else if (geom.type === "MultiPolygon") {
+        geom.coordinates = geom.coordinates.map(rewindPolygon);
+      }
+      // LineString / MultiLineString / Point don't need rewinding.
+    }
+
+    for (const f of geojson.features || []) {
+      if (f && f.geometry) rewindGeometry(f.geometry);
+    }
+
+    console.debug(
+      `[map.js] rewindForD3: ${flipped} ring(s) reversed, ${kept} already CW`,
+    );
+  })();
 
   const features = (geojson && geojson.features) || [];
   if (!features.length) {
@@ -223,6 +282,8 @@
 
   function draw() {
     container.innerHTML = "";
+
+    if (!geojson || !geojson.features || !geojson.features.length) return;
 
     const w = container.clientWidth || 400;
     const h = container.clientHeight || 400;

@@ -1,3 +1,5 @@
 .DS_Store
 inside_airbnb/dataset_cache/*
 !inside_airbnb/dataset_cache/.gitkeep
+.Rhistory
+inside_airbnb/listings/static/js/city_list/.Rhistory

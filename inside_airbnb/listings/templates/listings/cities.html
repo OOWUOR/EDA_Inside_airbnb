@@ -577,7 +577,7 @@
         {% if selected_city and city_obj %}
             <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
             {% if city_datasets.neighbourhoods %}
-                <script src="{% static 'js/city_list/draw_city_map.js' %}?v=3"></script>
+                <script src="{% static 'js/city_list/draw_city_map.js' %}?v=5"></script>
             {% endif %}
             <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/dist/plot.umd.min.js"></script>
             <script src="{% static 'js/city_list/draw_box_plots.js' %}?v=4"></script>
@@ -590,7 +590,8 @@
             <script src="{% static 'js/city_list/draw_amenities_charts.js' %}"></script>
             <script src="{% static 'js/city_list/draw_leadtime_charts.js' %}?v=5"></script>
             <script src="{% static 'js/city_list/draw_portfolio_charts.js' %}?v=4"></script>
-            <script src="{% static 'js/city_list/draw_snapshot_boxes_charts.js' %}?v=1"></script>
+            <script src="{% static 'js/city_list/draw_snapshot_boxes_charts.js' %}?v=12"></script>
+            <script src="{% static 'js/city_list/miniboxes_tooltips.js' %}"></script>
         {% endif %}
 
         {% if selected_city and city_obj %}
