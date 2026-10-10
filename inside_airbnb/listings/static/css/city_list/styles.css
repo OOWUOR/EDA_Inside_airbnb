@@ -302,8 +302,8 @@ button { font-family: inherit; }
   min-width: 0;
 }
 .cell-superlatives   { grid-area: superlatives; }
-.cell-neighbourhoods { grid-area: neighbourhoods; }
-.cell-lead-time      { grid-area: lead-time; }
+.cell-neighbourhoods { grid-area: lead-time; }
+.cell-lead-time      { grid-area: neighbourhoods; }
 .cell-portfolio      { grid-area: portfolio; }
 .cell-amenities      { grid-area: amenities; }
 
@@ -999,6 +999,59 @@ button { font-family: inherit; }
   border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(255,56,92,.18);
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   EMPTY / HINT — inline fallback shown when data is missing
+   (e.g. currency code not yet attached to a city)
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════════════════════════════
+   EMPTY / HINT — plain fallback when data is missing
+   ══════════════════════════════════════════════════════════════════════ */
+.empty {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: .62rem;
+  line-height: 1.35;
+  color: var(--muted);
+  text-align: left;
+}
+
+.empty-hint {
+  display: block;
+  font-size: .55rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+  margin-bottom: .2rem;
+}
+
+.empty code {
+  display: block;
+  padding: .3rem .45rem;
+  background: #f0f1f3;          /* classic grey */
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .58rem;
+  line-height: 1.4;
+  color: #495057;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+
+
+/* If the block lives inside a <strong>, don't bold the whole thing */
+strong > .empty,
+strong > .empty-hint,
+strong > .empty code {
+  font-weight: inherit;
+}
+strong > .empty-hint { font-weight: 700; }  /* keep the label bold */
 
 /* ══════════════════════════════════════════════════════════════════════
    AVAILABILITY — heatmap + hint

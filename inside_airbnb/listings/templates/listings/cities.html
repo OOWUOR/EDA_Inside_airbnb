@@ -8,7 +8,7 @@
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/city_list/styles.css' %}?v=11">
+        <link rel="stylesheet" href="{% static 'css/city_list/styles.css' %}?v=15">
     </head>
     <body>
 
@@ -198,11 +198,32 @@
                                         </div>
                                         <div class="data-card">
                                             <span class="label">Avg price</span>
-                                            <strong>{% if city_stats.avg_price_usd %}${{ city_stats.avg_price_usd|floatformat:2 }}{% else %}—{% endif %}</strong>
+                                            {% if city_stats.avg_price_usd %}
+                                            <strong>
+                                                ${{ city_stats.avg_price_usd|floatformat:2 }}
+                                            </strong>
+                                                
+                                            {% else %}
+                                                <div class="empty">
+                                                        <span class="empty-hint">No currency data — run:</span>
+                                                        <code>python manage.py attach_currencies </code>
+                                                    </div>
+                                                
+                                                
+                                            {% endif %}
                                         </div>
                                         <div class="data-card">
                                             <span class="label">Currency</span>
-                                            <strong>{{ city_stats.currency_code|default:"—" }}</strong>
+                                            
+                                                {% if city_stats.currency_code %}
+                                                    <strong>{{ city_stats.currency_code }}</strong>
+                                                {% else %}
+                                                    <div class="empty">
+                                                        <span class="empty-hint">No currency data — run:</span>
+                                                        <code>python manage.py attach_currencies </code>
+                                                    </div>
+                                                {% endif %}
+                                            
                                             <span><small>{{ city_stats.avg_price_local|floatformat:2|intcomma }}</small></span>
                                         </div>
 
@@ -510,12 +531,34 @@
                                     {# ── row 1 · col 1 — Superlatives ─────────────── #}
                                     <div class="analytics-cell cell-superlatives">
                                         <header class="analytics-header">
-                                            <i class="fas fa-medal"></i><span>Key Stats</span>
+                                            <i class="fas fa-medal"></i><span>Top Stats</span>
                                             <span class="badge" id="superlatives-badge">—</span>
                                         </header>
                                         <div class="analytics-body no-pad">
                                             <div class="superlatives-list" id="superlativesList">
                                                 <div class="superlatives-placeholder">Loading…</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {# ── row 2 · col 1 — Booking lead time ────────── #}
+                                    <div class="analytics-cell cell-lead-time">
+                                        <header class="analytics-header">
+                                            <i class="fas fa-calendar-day"></i><span>Booking lead time</span>
+                                            <span class="badge" id="lead-time-badge">—</span>
+                                        </header>
+                                        <div class="analytics-body" id="chart-lead-time"></div>
+                                    </div>
+
+
+                                    {# ── row 1+2 · col 3 — Amenities ──────────────── #}
+                                    <div class="analytics-cell cell-amenities">
+                                        <header class="analytics-header">
+                                            <i class="fas fa-suitcase"></i><span>Most Common Amenities</span>
+                                            {#<span class="badge" id="amenities-badge">—</span>#}
+                                        </header>
+                                        <div class="analytics-body no-pad">
+                                            <div class="amenities-list" id="amenitiesList">
+                                                <div class="amenities-placeholder">Loading…</div>
                                             </div>
                                         </div>
                                     </div>
@@ -531,28 +574,6 @@
                                                 <div class="neighbourhoods-placeholder">Loading…</div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    {# ── row 1+2 · col 3 — Amenities ──────────────── #}
-                                    <div class="analytics-cell cell-amenities">
-                                        <header class="analytics-header">
-                                            <i class="fas fa-suitcase"></i><span>Amenities</span>
-                                            <span class="badge" id="amenities-badge">—</span>
-                                        </header>
-                                        <div class="analytics-body no-pad">
-                                            <div class="amenities-list" id="amenitiesList">
-                                                <div class="amenities-placeholder">Loading…</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {# ── row 2 · col 1 — Booking lead time ────────── #}
-                                    <div class="analytics-cell cell-lead-time">
-                                        <header class="analytics-header">
-                                            <i class="fas fa-calendar-day"></i><span>Booking lead time</span>
-                                            <span class="badge" id="lead-time-badge">—</span>
-                                        </header>
-                                        <div class="analytics-body" id="chart-lead-time"></div>
                                     </div>
 
                                     {# ── row 2 · col 2 — Portfolio split ──────────── #}

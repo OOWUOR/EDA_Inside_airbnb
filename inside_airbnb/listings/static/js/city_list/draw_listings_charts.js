@@ -77,7 +77,7 @@
     return String(Math.round(v));
   }
 
-  /* 1-1.5-2-2.5-3-4-5-7.5-10 ladder — the crucial change. */
+  /* 1-1.5-2-2.5-3-4-5-7.5-10 ladder*/
   const STEP_LADDER = [1, 1.5, 2, 2.5, 3, 4, 5, 7.5, 10];
 
   function niceStep(rough) {
