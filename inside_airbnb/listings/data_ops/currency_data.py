@@ -100,10 +100,22 @@ class CurrencyData:
         url = WISE_URL.format(code=code.lower())
         try:
             soup = self._soup(url)
-            tag = soup.find("input", id="target-input")
-            if tag and tag.get("value"):
-                raw = tag["value"].replace(",", "").strip()
+            element = soup.find("span", attrs={"dir": "ltr"})
+            if element:
+                text = element.get_text()
+                target = float(
+                    text.split("=")[-1].strip().split(" ")[0].replace(",", "").strip()
+                )
+            else:
+                print("Could not find the target span element.")
+            if target is not None:
+                raw = target
+                # print(f"[info] {code}: {raw}")
                 return Decimal(raw)
+            # tag = soup.find("input", id="target-input")
+            # if tag and tag.get("value"):
+            #    raw = tag["value"].replace(",", "").strip()
+            #    return Decimal(raw)
         except Exception as exc:
             print(f"[warn] {code}: {type(exc).__name__}: {exc}")
         return None
