@@ -197,6 +197,7 @@
             }
           </div>
           <div class="host-meta">
+            <span><i class="fas fa-clock"></i> ${h.host_since_year}</span>
             <span><i class="fas fa-home"></i> ${h.listing_count}</span>
             <span><i class="fas fa-star"></i> ${ratingTxt}</span>
             <span><i class="fas fa-tag"></i> ${priceTxt}</span>

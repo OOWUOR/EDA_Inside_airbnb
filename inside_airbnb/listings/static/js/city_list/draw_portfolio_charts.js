@@ -158,7 +158,7 @@
         overflow: "visible",
       },
       x: {
-        label: "Portfolio",
+        label: "Listings size",
         domain: rows.map((r) => r.label),
         tickSize: 0,
         tickPadding: 4,
@@ -166,7 +166,7 @@
         tickRotate: 0,
       },
       y: {
-        label: null,
+        label: "n_hosts",
         domain: [0, yMax],
         nice: true, // round the top to a friendly number
         ticks: 3,

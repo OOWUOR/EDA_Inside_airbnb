@@ -361,7 +361,7 @@ button { font-family: inherit; }
   display: inline-flex;
   align-items: center;
   gap: .4rem;
-  flex-shrink: 0;
+  /*flex-shrink: 0;*/
 }
 
 .container-header .header-back {
@@ -1566,23 +1566,28 @@ strong > .empty-hint { font-weight: 700; }  /* keep the label bold */
   display: flex; flex-direction: column; gap: .85rem;
   overflow-y: auto;
   background-image: url("../img/city.jpg");
+  background: var(--border-soft);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 0.5rem;
 }
 /* Header strip above the grid — shows current filter + count */
 .city-picker-header {
   display: flex;
   align-items: baseline;
   gap: .75rem;
-  padding: 0 .25rem .5rem;
   border-bottom: 1px solid var(--border-soft);
-  flex-shrink: 0;
+  padding: .6rem .9rem;
+  background: var(--accent-grad); color: #fff;
+  font-size: .85rem; font-weight: 700;
+  flex: 0 0 auto;
+ 
 }
 .city-picker-title {
   font-size: .95rem;
   font-weight: 700;
-  color: var(--text);
+  color: var(--panel);
   letter-spacing: -.01em;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1604,7 +1609,8 @@ strong > .empty-hint { font-weight: 700; }  /* keep the label bold */
 .city-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: .6rem;
+  gap: .5rem;
+  padding: .85rem .85rem;
 }
 .city-tile {
   display: flex; align-items: center; gap: .65rem;

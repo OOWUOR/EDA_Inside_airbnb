@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Warung Indah — Authentic Indonesian Restaurant in Brussels</title>
+<meta name="description" content="Authentic Indonesian comfort food in the heart of Brussels. Rendang, sate and rijsttafel made from family recipes. Dine-in, takeaway and catering." />
+<meta name="theme-color" content="#15110f" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Warung Indah — Authentic Indonesian Restaurant in Brussels" />
+<meta property="og:description" content="Traditional Indonesian flavours, crafted from family recipes." />
+<meta property="og:image" content="assets/images/hero-sate.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+
+<!-- Structured data for Google (rich results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Warung Indah",
+  "servesCuisine": "Indonesian",
+  "priceRange": "€€",
+  "telephone": "+32 412 34 56 78",
+  "email": "info@warungindah.be",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Anspachlaan 100",
+    "postalCode": "1000",
+    "addressLocality": "Brussels",
+    "addressCountry": "BE"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "12:00", "closes": "14:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "18:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "17:30", "closes": "23:00" }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#menu">Skip to menu</a>
+
+<!-- ============================================================
+     HEADER (transparent over hero, solid once scrolled)
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">WI</span>
+      <span class="brand__name">Warung Indah</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      <a href="#essentials">Practical</a>
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a class="btn btn--primary btn--sm" href="#reserve">Book a Table</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ==========================================================
+       1. HERO
+       ========================================================== -->
+  <section class="hero" id="hero">
+    <img class="hero__img" src="assets/images/hero-sate.jpg"
+         alt="Charcoal-grilled sate skewers glazed with peanut sauce" />
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="container hero__content">
+      <p class="hero__eyebrow">Warung Indah · Brussels</p>
+      <h1 class="hero__title">Authentic Indonesian Comfort Food in the Heart of Brussels</h1>
+      <p class="hero__sub">Traditional Indonesian flavours, crafted from family recipes.</p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#reserve">Book a Table</a>
+        <a class="btn btn--ghost" href="#menu">View Menu</a>
+      </div>
+
+      <ul class="hero__badges">
+        <li>Dine-In</li>
+        <li>Takeaway</li>
+        <li>Catering Available</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       2. CORE ESSENTIALS GRID
+       ========================================================== -->
+  <section class="section essentials" id="essentials">
+    <div class="container">
+      <h2 class="section__title">Good to know</h2>
+
+      <div class="essentials__grid">
+        <!-- Hours -->
+        <article class="card">
+          <h3 class="card__title">
+            <span class="card__icon" aria-hidden="true">🕐</span> Opening Hours
+          </h3>
+          <dl class="hours" id="hours-list"><!-- injected --></dl>
+        </article>
+
+        <!-- Address -->
+        <article class="card">
+          <h3 class="card__title">
+            <span class="card__icon" aria-hidden="true">📍</span> Find Us
+          </h3>
+          <p class="card__body" id="address-text"><!-- injected --></p>
+          <a class="link-arrow" id="maps-link" href="#" target="_blank" rel="noopener">
+            Open in Maps <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <!-- Contact / services -->
+        <article class="card">
+          <h3 class="card__title">
+            <span class="card__icon" aria-hidden="true">✉️</span> Get in Touch
+          </h3>
+          <p class="card__body">
+            <a id="phone-link" href="#"><!-- injected --></a><br />
+            <a id="email-link" href="#"><!-- injected --></a>
+          </p>
+          <ul class="badge-row" id="service-badges"><!-- injected --></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       3. DIGITAL MENU
+       ========================================================== -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <h2 class="section__title">The Menu</h2>
+      <p class="section__lede">
+        Slow-cooked, charcoal-grilled, freshly pounded. Spice levels run from
+        <span class="nowrap">🌶️ mild</span> to <span class="nowrap">🌶️🌶️🌶️ fiery</span>.
+      </p>
+
+      <!-- Controls -->
+      <div class="menu__controls">
+        <label class="search" for="menu-search">
+          <span class="search__icon" aria-hidden="true">🔍</span>
+          <input type="search" id="menu-search" placeholder="Search dishes or ingredients…"
+                 autocomplete="off" aria-controls="menu-panels" />
+        </label>
+
+        <div class="chips" id="diet-chips" role="group" aria-label="Filter by dietary preference">
+          <!-- injected -->
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs" id="menu-tabs" role="tablist" aria-label="Menu categories">
+        <!-- injected -->
+      </div>
+
+      <!-- Panels / results -->
+      <div id="menu-panels" aria-live="polite"><!-- injected --></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       4. STORY / CONCEPT
+       ========================================================== -->
+  <section class="section story" id="story">
+    <div class="container story__grid">
+      <div class="story__media">
+        <img src="assets/images/story-kitchen.jpg"
+             alt="The kitchen at Warung Indah, with spice pastes being pounded by hand" loading="lazy" />
+      </div>
+
+      <div class="story__text">
+        <h2 class="section__title">From a family kitchen in Padang</h2>
+        <p>
+          Warung Indah began with our grandmother's rendang, cooked down over six hours in a
+          clay pot in West Sumatra. Everything we serve still starts from that same spice
+          paste — galangal, lemongrass, candlenut and turmeric, pounded by hand each morning.
+        </p>
+        <p>
+          In 2016 we brought those recipes to Brussels, and we haven't changed a thing since.
+          Same family, same wok, same obsession with getting the sambal right.
+        </p>
+        <p class="story__signoff">— The Hartono family</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       5. RESERVATION
+       ========================================================== -->
+  <section class="section reserve" id="reserve">
+    <div class="container">
+      <h2 class="section__title">Book a Table</h2>
+      <p class="section__lede">
+        Reservations open 60 days ahead. For groups of 8 or more, please call us directly.
+      </p>
+
+      <div class="reserve__widget">
+        <!--
+          ── PRODUCTION ─────────────────────────────────────────────
+          Replace the placeholder below with your Resengo embed.
+          Resengo is the standard Belgian reservation system and keeps
+          table assignment + compliance in sync automatically.
+
+          <iframe
+            src="https://bookings.resengo.com/warung-indah?lang=en"
+            title="Reserve a table at Warung Indah"
+            width="100%" height="760" frameborder="0"
+            style="border:0;border-radius:16px;background:#fff"
+            loading="lazy"></iframe>
+          ───────────────────────────────────────────────────────────
+        -->
+        <div class="reserve__placeholder">
+          <p class="reserve__placeholder-title">Reservation widget loads here</p>
+          <p class="reserve__placeholder-body">
+            Drop your Resengo <code>&lt;iframe&gt;</code> into
+            <code>#reserve .reserve__widget</code>.
+          </p>
+          <a class="btn btn--primary" href="#reserve">Reserve via Resengo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p class="site-footer__brand">Warung Indah</p>
+    <p class="site-footer__meta" id="footer-meta"><!-- injected --></p>
+    <p class="site-footer__legal">© <span id="year"></span> Warung Indah · Brussels</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY MOBILE CTA BAR (always visible < 768px)
+     ============================================================ -->
+<div class="sticky-cta" role="region" aria-label="Quick actions">
+  <a class="btn btn--ghost" href="#menu">View Menu</a>
+  <a class="btn btn--primary" href="#reserve">Book a Table</a>
+</div>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>

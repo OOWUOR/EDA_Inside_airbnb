@@ -46,7 +46,8 @@ CHART_CACHE_SECONDS = 60 * 60 * 6  # 6 hours — chart aggregates
 # Bump whenever the *shape* of a computed response changes so stale
 # cached values are not returned for the new code.
 # Adjust accordingly
-CHART_CACHE_VERSION = 1
+CHART_CACHE_VERSION = 2
+CACHE_VERSION = 2
 
 # kind -> (City model field, cache filename)
 KINDS = {
@@ -480,7 +481,12 @@ def compute_city_stats(city) -> dict[str, Any]:
         "top_neighbourhood": {"name": None, "count": None},
         "median_lead_days": None,
         # bottom-right cell
-        "lead_time_hist": {"labels": [], "values": [], "median": None},
+        # "lead_time_hist": {"labels": [], "values": [], "median": None},
+        # bottom-right cell
+        "lead_time_buckets": {
+            "labels": ["0", "1–7", "8–30", "31+"],
+            "values": [0, 0, 0, 0],
+        },
         # mini box plots (snapshot cards)
         "box_nights": None,
         "box_occupancy": None,
@@ -568,6 +574,11 @@ def compute_city_stats(city) -> dict[str, Any]:
                     }
 
             # --- median booking lead time + histogram -----------------
+            # --- median booking lead time + bucket counts -------------
+            # Buckets are computed server-side so the browser gets four
+            # integer counts, not the raw series (200k ints per city).
+            # No upper_q clipping: the "31+" bucket must include the
+            # long tail, not discard it.
             if {"last_scraped", "price_quote_checkin_date"} <= set(df.columns):
                 scraped = pd.to_datetime(df["last_scraped"], errors="coerce")
                 checkin = pd.to_datetime(
@@ -577,9 +588,15 @@ def compute_city_stats(city) -> dict[str, Any]:
                 lead = lead[lead >= 0]
                 if len(lead):
                     stats["median_lead_days"] = int(lead.median())
-                    stats["lead_time_hist"] = _distribution(
-                        lead, bins=12, upper_q=0.98, suffix="d"
-                    )
+                    stats["lead_time_buckets"] = {
+                        "labels": ["0", "1–7", "8–30", "31+"],
+                        "values": [
+                            int((lead == 0).sum()),
+                            int(lead.between(1, 7).sum()),
+                            int(lead.between(8, 30).sum()),
+                            int((lead >= 31).sum()),
+                        ],
+                    }
 
         except Exception:
             logger.exception("Failed computing stats for %s", city.city_slug)
@@ -786,6 +803,31 @@ def compute_city_hosts(city, *, top_n: int = 50) -> dict[str, Any]:
     split) and, if the calendar file is cached, computes a host-blocked-days
     histogram from calendar + occupancy.
     """
+
+    def get_since(df):
+        scraped = pd.to_datetime(df.get("last_scraped"), errors="coerce")
+        yrs = pd.to_numeric(df.get("hosts_time_as_host_years"), errors="coerce")
+        mos = pd.to_numeric(df.get("hosts_time_as_host_months"), errors="coerce")
+        # Fallback to "as user" tenure when "as host" is entirely missing.
+        if yrs.isna().all() and mos.isna().all() and "hosts_time_as_user_years" in df:
+            yrs = pd.to_numeric(df["hosts_time_as_user_years"], errors="coerce")
+            mos = pd.Series(0, index=df.index)
+
+        total_months = (yrs.fillna(0) * 12 + mos.fillna(0)).astype("float64")
+
+        # Convert dates to a linear month index, subtract tenure, back to years.
+        scraped_idx = scraped.dt.year * 12 + (scraped.dt.month - 1)
+        since_idx = scraped_idx - total_months
+        since_year = (since_idx // 12).round().astype("Int64")
+
+        # Airbnb launched in 2008; a "since" year before that is a data glitch,
+        # and a future "since" year is impossible.
+        scraped_year = scraped.dt.year.astype("Int64")
+        since_year = since_year.where(
+            (since_year >= 2008) & (since_year <= scraped_year)
+        )
+        return since_year
+
     _, filename = KINDS["listings"]
     path = _path_for(city, filename)
 
@@ -841,6 +883,9 @@ def compute_city_hosts(city, *, top_n: int = 50) -> dict[str, Any]:
                 "estimated_revenue_l365d",
                 "hosts_time_as_user_years",
                 "host_listings_count",
+                "last_scraped",
+                "hosts_time_as_host_years",
+                "hosts_time_as_host_months",
             }
             with gzip.open(path, "rt", encoding="utf-8", errors="replace") as fh:
                 df = pd.read_csv(
@@ -859,6 +904,7 @@ def compute_city_hosts(city, *, top_n: int = 50) -> dict[str, Any]:
                 if "price" in df.columns
                 else pd.Series([pd.NA] * len(df))
             )
+            df["_since"] = get_since(df).astype("Int64")
             df["_is_super"] = (
                 df["host_is_superhost"].astype(str).str.lower().isin(["t", "true"])
                 if "host_is_superhost" in df.columns
@@ -885,7 +931,8 @@ def compute_city_hosts(city, *, top_n: int = 50) -> dict[str, Any]:
             agg = (
                 df.groupby("host_id", dropna=True)
                 .agg(
-                    host_name=("host_name", "first"),
+                    host_name=("host_name", "min"),
+                    host_since_year=("_since", "first"),
                     host_picture_url=("host_picture_url", "first"),
                     listing_count=("id", "count"),
                     avg_rating=("_rating", "mean"),
@@ -912,6 +959,11 @@ def compute_city_hosts(city, *, top_n: int = 50) -> dict[str, Any]:
                         "host_picture_url": (
                             str(r["host_picture_url"])
                             if pd.notna(r["host_picture_url"])
+                            else None
+                        ),
+                        "host_since_year": (
+                            int(r["host_since_year"])
+                            if pd.notna(r["host_since_year"])
                             else None
                         ),
                         "is_superhost": bool(r["is_superhost"]),

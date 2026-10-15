@@ -1,23 +1,23 @@
-/* Booking lead-time histogram — with compact value labels on top of bars.
+/* Bar plot — lead-time grouped into 4 brackets.
  *
  * Reads: <script id="city-stats-data" type="application/json">{...}</script>
+ *   stats.lead_time_buckets — {labels:[…], values:[…]}  (4 buckets)
+ *   stats.median_lead_days  — number, computed server-side
  * Renders into:
- *   #chart-lead-time   — histogram of days between scrape and check-in
+ *   #chart-lead-time   — 4 bars (0d, 1–7d, 8–30d, 31+d)
  *   #lead-time-badge   — median lead time, shown in the header
  *
  * Requires Observable Plot on window.Plot.
  *
- * Value labels
- * ------------
- * Counts are drawn just above each bar in a shortened form:
- *     950  →  "950"
- *     1234 →  "1.2k"
- *     12000 → "12k"
- *     1234567 → "1.2M"
+ * Buckets
+ * -------
+ *   0     — same-day check-in
+ *   1–7   — within a week
+ *   8–30  — within a month
+ *   31+   — a month or more
  *
- * The y-domain is padded so the tallest label always has room. When bars
- * get too narrow for every label, labels are thinned by stride — but the
- * peak bar is always labelled, since it is the one the reader needs most.
+ * Styling matches portfolio.js: soft rose bars, rounded corners, tight
+ * gaps between bars, light y-axis, value labels above bars.
  */
 (function () {
   "use strict";
@@ -71,22 +71,25 @@
 
   /* ------------------------------------------------------------- normalise */
 
-  const hist = stats.lead_time_hist || {};
-  const rawLbl = Array.isArray(hist.labels) ? hist.labels : [];
-  const rawVal = Array.isArray(hist.values) ? hist.values : [];
+  const bt = stats.lead_time_buckets || {};
+  const labels = Array.isArray(bt.labels) ? bt.labels : [];
+  const values = Array.isArray(bt.values) ? bt.values : [];
 
   const rows = [];
   let total = 0;
-  for (let i = 0; i < rawLbl.length; i++) {
-    const v = Number(rawVal[i]);
-    if (!isFinite(v) || v < 0) continue;
-    rows.push({ label: String(rawLbl[i]), value: v });
-    total += v;
+  for (let i = 0; i < labels.length; i++) {
+    const v = Number(values[i]);
+    const n = isFinite(v) && v > 0 ? v : 0;
+    rows.push({ label: String(labels[i]), value: n });
+    total += n;
   }
 
+  const medianLead = Number(stats.median_lead_days);
+
   console.debug(LOG, "parsed", {
-    bins: rows.length,
-    total: total,
+    n: total,
+    median: medianLead,
+    buckets: rows.map((r) => r.label + "=" + r.value),
     mountW: mount.clientWidth,
     mountH: mount.clientHeight,
     plotVersion: (Plot && Plot.version) || "unknown",
@@ -95,11 +98,11 @@
   /* --------------------------------------------------------------- palette */
 
   const ROSE = "#ff385c";
+  const ROSE_SOFT = "#ff8ba0";
   const AXIS = "#dee2e6";
-  const GRID = "#f1f3f5";
+  const GRID = "#eef0f2";
   const TICK = "#6c757d";
-  const LABEL = "#868e96";
-  const VALUE = "#343a40";
+  const LABEL = "#343a40";
   const FONT =
     "system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
 
@@ -107,8 +110,6 @@
 
   const nfInt = new Intl.NumberFormat();
 
-  /* Short form used for the labels above the bars: "950", "1.2k", "12k",
-     "1.2M". One decimal only when it adds information. */
   function fmtShort(v) {
     const a = Math.abs(v);
     if (a >= 1e6) {
@@ -119,15 +120,14 @@
           : Math.round(m * 10) / 10) + "M"
       );
     }
-    if (a >= 1e4) return Math.round(v / 1e3) + "k";
+    /*if (a >= 1e4) return Math.round(v / 1e3) + "k";
     if (a >= 1e3) {
       const k = Math.round(v / 100) / 10;
       return (k % 1 === 0 ? k : k.toFixed(1)) + "k";
-    }
+    }*/
     return String(Math.round(v));
   }
 
-  /* Longer form used for axis ticks and tooltips. */
   function fmtY(v) {
     if (v >= 1e6) {
       const m = v / 1e6;
@@ -147,31 +147,20 @@
     return (p >= 10 ? p.toFixed(0) : p.toFixed(1)) + "%";
   }
 
-  function niceTicks(min, max, target) {
-    if (!(max > min) || !isFinite(min) || !isFinite(max)) return [min];
-    const raw = (max - min) / Math.max(1, target);
-    const mag = Math.pow(10, Math.floor(Math.log10(raw)));
-    const norm = raw / mag;
-    const step = (norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 5 ? 5 : 10) * mag;
-    const out = [];
-    const i0 = Math.ceil(min / step - 1e-9);
-    const i1 = Math.floor(max / step + 1e-9);
-    for (let i = i0; i <= i1; i++) out.push(i * step);
-    return out;
-  }
-
   /* ----------------------------------------------------------- header badge */
 
   if (badge) {
-    const med = Number(stats.median_lead_days);
-    badge.textContent = isFinite(med)
-      ? "median " + (med >= 10 ? Math.round(med) : med.toFixed(1)) + "d"
+    badge.textContent = isFinite(medianLead)
+      ? "median " +
+        (medianLead >= 10 ? Math.round(medianLead) : medianLead.toFixed(1)) +
+        "d"
       : "";
   }
 
   /* ---------------------------------------------------------- empty state */
 
-  if (!rows.length) {
+  const anyValue = rows.some((r) => r.value > 0);
+  if (!anyValue) {
     showMessage("No lead-time data");
     return;
   }
@@ -182,15 +171,14 @@
   for (let i = 1; i < rows.length; i++) {
     if (rows[i].value > peak.value) peak = rows[i];
   }
-  const medVal = Number(stats.median_lead_days);
   mount.setAttribute("role", "img");
   mount.setAttribute(
     "aria-label",
     "Lead-time distribution across " +
       nfInt.format(total) +
       " listings" +
-      (isFinite(medVal) ? ", median " + medVal + " days" : "") +
-      ". Peak bin: " +
+      (isFinite(medianLead) ? ", median " + medianLead + " days" : "") +
+      ". Largest bracket: " +
       peak.label +
       " (" +
       nfInt.format(peak.value) +
@@ -228,86 +216,37 @@
   let lastH = 0;
   let rendered = false;
 
-  /* Safe single-datum text annotation. */
-  function annotation(text, opts) {
-    return Plot.text(
-      [0],
-      Object.assign(
-        {
-          text: () => text,
-          pointerEvents: "none",
-        },
-        opts || {},
-      ),
-    );
-  }
-
   function buildSpec(w, h) {
     const values = rows.map((r) => r.value);
     const max = Math.max.apply(null, values);
     if (!(max > 0)) return null;
 
+    const compact = w < 320;
     const tiny = w < 160 || h < 90;
-    const narrow = w < 260;
-    const fontSize = tiny ? 8 : narrow ? 9 : 10;
-    const valueFont = tiny ? 7 : narrow ? 8 : 9;
-
-    /* ---- y scale with label headroom ------------------------------- *
-     * Extra 20% above max so the value label on the tallest bar sits
-     * well clear of the plot top edge. No label clipping. */
-    const domainTop = max * 1.2;
+    const fontSize = tiny ? 8 : compact ? 9 : 10;
 
     const showYAxis = !tiny;
-    const ticks = showYAxis
-      ? niceTicks(0, domainTop, 2).filter((v) => v > 0 && v <= domainTop)
-      : [];
-    const yTickSet = new Set(ticks);
 
     /* ---- margins --------------------------------------------------- */
 
-    const marginTop = tiny ? 10 : 14; // room for the top label
-    const marginRight = tiny ? 4 : 6;
-    const marginLeft = showYAxis ? (narrow ? 24 : 30) : 2;
-
-    const maxLabelLen = rows.reduce((s, r) => Math.max(s, r.label.length), 0);
-    const rotate = rows.length > 4 || maxLabelLen > 4 || narrow;
-    const labelSpace = rotate
-      ? Math.min(34, 12 + maxLabelLen * fontSize * 0.55)
-      : fontSize + 4;
-
-    const showXTitle = !tiny;
-    const marginBottom = labelSpace + (showXTitle ? 2 : 0) + 4;
-
-    /* ---- x-tick thinning ------------------------------------------- */
-
-    const perLabel = Math.max(18, fontSize * 2.6);
-    const plotW = Math.max(1, w - marginLeft - marginRight);
-    const stride = Math.max(1, Math.ceil((rows.length * perLabel) / plotW));
-    const tickSet = new Set();
-    for (let i = 0; i < rows.length; i += stride) tickSet.add(rows[i].label);
-
-    /* ---- value-label thinning -------------------------------------- *
-     * Show every label when bars are wide enough; otherwise thin by
-     * stride. The peak bar is always labelled. */
-    const perBar = plotW / rows.length;
-    const labelOK = perBar >= 14 || rows.length <= 8;
-    const labelStride = labelOK ? 1 : Math.max(1, Math.ceil(14 / perBar));
-    const peakIdx = rows.indexOf(peak);
-
-    const labeledRows = rows.filter(
-      (d, i) => d.value > 0 && (i % labelStride === 0 || i === peakIdx),
-    );
+    const marginTop = tiny ? 12 : 16;    // room for top value label
+    const marginRight = 8;
+    const marginLeft = showYAxis ? (compact ? 26 : 30) : 4;
+    const marginBottom = 22;
 
     /* ---- marks ----------------------------------------------------- */
 
     const marks = [
+      // Zero baseline
       Plot.ruleY([0], { stroke: AXIS, strokeWidth: 1 }),
 
+      // Bars — soft rose, rounded corners, tight gaps
       Plot.barY(rows, {
         x: "label",
         y: "value",
-        fill: ROSE,
-        fillOpacity: 0.85,
+        fill: ROSE_SOFT,
+        fillOpacity: 0.9,
+        rx: 2,
         title: (d) =>
           d.label +
           "\n" +
@@ -316,36 +255,19 @@
           fmtPct(d.value, total) +
           ")",
       }),
+
+      // Value labels above bars
+      Plot.text(rows, {
+        x: "label",
+        y: "value",
+        text: (d) => (d.value > 0 ? fmtShort(d.value) : ""),
+        dy: -5,
+        fontSize: fontSize - 0.5,
+        fontWeight: 500,
+        fill: LABEL,
+        pointerEvents: "none",
+      }),
     ];
-
-    /* Value labels on top of bars, shortened. */
-    if (labeledRows.length) {
-      marks.push(
-        Plot.text(labeledRows, {
-          x: "label",
-          y: "value",
-          text: (d) => fmtShort(d.value),
-          dy: -4,
-          fontSize: valueFont,
-          fontWeight: 600,
-          fill: VALUE,
-          pointerEvents: "none",
-        }),
-      );
-    }
-
-    if (showXTitle) {
-      marks.push(
-        annotation("days", {
-          frameAnchor: "bottom-right",
-          dx: -marginRight,
-          dy: -1,
-          fontSize: fontSize,
-          fontStyle: "italic",
-          fill: LABEL,
-        }),
-      );
-    }
 
     return {
       width: w,
@@ -362,21 +284,20 @@
         overflow: "visible",
       },
       x: {
-        label: null,
+        label: "Days",
         domain: rows.map((r) => r.label),
+        padding: 0.1,   // match portfolio.js — tight gaps between bars
         tickSize: 0,
-        tickPadding: 2,
-        tickRotate: rotate ? -40 : 0,
-        tickAnchor: rotate ? "end" : "middle",
-        tickFormat: (v) => (tickSet.has(v) ? String(v) : ""),
+        tickPadding: 4,
       },
       y: {
-        label: null,
-        domain: [0, domainTop],
-        ticks: ticks,
-        tickFormat: (v) => (yTickSet.has(v) ? fmtY(v) : ""),
+        label: "n_bookings",
+        domain: [0, max * 1.18],   // headroom for value labels
+        nice: true,                // round the top to a friendly number
+        ticks: showYAxis ? 3 : 0,
+        tickFormat: showYAxis ? fmtY : () => "",
         tickSize: 0,
-        tickPadding: 2,
+        tickPadding: 3,
         grid: showYAxis,
         gridStroke: GRID,
         gridStrokeWidth: 1,
@@ -392,13 +313,12 @@
         null,
         rows.map((r) => r.value),
       ) || 1;
-    const labeledRows = rows.filter((d) => d.value > 0);
     return {
       width: w,
       height: h,
-      marginTop: 14,
-      marginRight: 6,
-      marginBottom: 24,
+      marginTop: 16,
+      marginRight: 8,
+      marginBottom: 22,
       marginLeft: 28,
       style: {
         fontSize: "9px",
@@ -409,15 +329,17 @@
       },
       x: {
         domain: rows.map((r) => r.label),
-        tickRotate: -35,
+        padding: 0.1,
         tickSize: 0,
-        tickPadding: 2,
+        tickPadding: 4,
       },
       y: {
-        domain: [0, max * 1.2],
-        ticks: 2,
+        domain: [0, max * 1.18],
+        nice: true,
+        ticks: 3,
+        tickFormat: fmtY,
         tickSize: 0,
-        tickPadding: 2,
+        tickPadding: 3,
         grid: true,
         gridStroke: GRID,
         gridStrokeWidth: 1,
@@ -427,17 +349,18 @@
         Plot.barY(rows, {
           x: "label",
           y: "value",
-          fill: ROSE,
-          fillOpacity: 0.85,
+          fill: ROSE_SOFT,
+          fillOpacity: 0.9,
+          rx: 2,
         }),
-        Plot.text(labeledRows, {
+        Plot.text(rows, {
           x: "label",
           y: "value",
-          text: (d) => fmtShort(d.value),
-          dy: -4,
-          fontSize: 8,
-          fontWeight: 600,
-          fill: VALUE,
+          text: (d) => (d.value > 0 ? fmtShort(d.value) : ""),
+          dy: -5,
+          fontSize: 9,
+          fontWeight: 500,
+          fill: LABEL,
           pointerEvents: "none",
         }),
       ],
@@ -470,7 +393,7 @@
       const svg = Plot.plot(spec);
       mount.appendChild(svg);
       rendered = true;
-      console.debug(LOG, "rendered (rich)", { w: w, h: h, bins: rows.length });
+      console.debug(LOG, "rendered (rich)", { w: w, h: h, bars: rows.length });
       return true;
     } catch (err) {
       console.error(LOG, "rich Plot.plot threw — falling back", err);

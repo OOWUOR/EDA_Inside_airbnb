@@ -1,14 +1,19 @@
 # Create your views here.
 from django.db.models import Count, Q
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 
-from .data_ops.datasets import (compute_city_amenities,
-                               compute_city_availability, compute_city_charts,
-                               compute_city_hosts, compute_city_reviews,
-                               compute_city_stats, compute_city_superlatives,
-                               datasets_as_json, load_city_datasets)
-
+from .data_ops.datasets import (
+    compute_city_amenities,
+    compute_city_availability,
+    compute_city_charts,
+    compute_city_hosts,
+    compute_city_reviews,
+    compute_city_stats,
+    compute_city_superlatives,
+    datasets_as_json,
+    load_city_datasets,
+)
 from .models import City, Continent, Country
 
 
@@ -29,6 +34,7 @@ class CityListView(ListView):
     model = City
     template_name = "listings/cities.html"
     context_object_name = "cities"
+    paginate_by = 20
 
     # ---------------------------------------------------------------- helpers
     def _continent_slug(self):
@@ -46,7 +52,7 @@ class CityListView(ListView):
     # ---------------------------------------------------------------- queryset
     def get_queryset(self):
         """Base queryset — only used for the header count."""
-        qs = super().get_queryset()
+        qs = super().get_queryset().select_related("country")
 
         if s := self._continent_slug():
             qs = qs.filter(country__continent__slug=s)
@@ -58,7 +64,7 @@ class CityListView(ListView):
                 | Q(region__icontains=q)
                 | Q(country__name__icontains=q)
             )
-        return qs
+        return qs.order_by("city", "region")
 
     # ---------------------------------------------------------------- context
     def get_context_data(self, **kwargs):
@@ -87,6 +93,9 @@ class CityListView(ListView):
         ctx["selected_country"] = country_slug
         ctx["selected_city"] = city_slug
         ctx["search_query"] = search_query
+        params = self.request.GET.copy()
+        params.pop("page", None)
+        ctx["querystring"] = params.urlencode()
 
         # ── State 2: country picked, no city yet → city picker ──────
         if not city_slug:
@@ -101,7 +110,7 @@ class CityListView(ListView):
                 )
             ctx["country_cities"] = cities_qs
 
-            if country_slug:
+            if country_slug and country_slug:
                 ctx["selected_country_obj"] = get_object_or_404(
                     Country, slug=country_slug
                 )
